@@ -1,55 +1,9 @@
 // const main = document.getElementById('main');
-// const form = document.getElementById('form');
-// const search = document.getElementById('search');
 // const dataList = document.getElementById('weight');
 
 
-// function getActivities(filteredActivities){
-//     fetch("./activities.json")
-//     .then(response => {
-//        return response.json();
-//     })
-//     .then(data => console.log(filteredActivities));
-//     // .then(data => data.forEach(object =>{
-//     //     if(object.activity === "filteredActivities"){
-//     //         console.log(object[1]);
-//     //     }else{
-//     //         console.log('bah non')
-//     //     }
-//     // }));
-// }
-
-// function getMovies(url){
-//     fetch(url).then(res => res.json()).then(data => {
-//         showActivities(data.results);
-//         }    
-//     )
-// }
-
-// function showActivities(){
-//     //append input Myactivity
-//     //Dynamic generation
-// }
-
-
-// form.addEventListener("keyup", e => {
-//     let searchString = [];
-//     searchString.push(e.target.value.toLowerCase());
-//     console.log(searchString)
-//     const filteredActivities = searchString.filter(activity => {
-//     return (
-//         activity.includes(searchString)
-//     );
-//   });        
-
-//   getActivities(filteredActivities);
-//   showActivities(filteredActivities);
-//   //Erase if nothing written
-// });
-
-
 const search = document.getElementById('search');
-const matchList = document.getElementById('match-list');
+const matchList = document.getElementById('activities');
 
 //Search JSON and filter it
 const searchActivities = async searchText => {
@@ -65,14 +19,15 @@ const searchActivities = async searchText => {
         matches = [];
     }
 
-    console.table(matches);
-    //outputHtml(matches);
+    // console.table(matches);
+    outputHtml(matches);
 };
 
 //Show results in HTML
 const outputHtml = matches => {
     if(matches.length > 0){
-        const html = matches.map(match => `<p>${match}</p>`)
+        const html = matches.map(match => `<option value="${match.Activity}">${match.Activity}</p>`
+        )
         .join('');
         matchList.innerHTML = html;
         console.log(html);
@@ -80,3 +35,16 @@ const outputHtml = matches => {
 };
 
 search.addEventListener('input', () => searchActivities(search.value));
+
+//Eventlistener for button
+form.addEventListener('submit', (e) =>{
+    e.preventDefault();
+    console.log('test') //ok
+
+
+//     const searchTerm = search.value;
+
+//     if(searchTerm) {
+//         getMovies(searchURL+'&query='+searchTerm);
+//     }
+})
