@@ -34,6 +34,7 @@ const outputHtml = matches => {
     }
 };
 
+//See how to make option disappear when clicked
 search.addEventListener('input', () => searchActivities(search.value));
 
 //Eventlistener for button
