@@ -9,10 +9,10 @@ function getActivities(filteredActivities){
     .then(response => {
        return response.json();
     })
-    .then(data => console.log(data));
+    .then(data => showActivities(data.results));
 }
 
-function showActivities(){
+function showActivities(filteredActivities){
     //append input Myactivity
     //Dynamic generation
 }
@@ -31,6 +31,7 @@ form.addEventListener("keyup", e => {
     );
     
   });
+  console.log(filteredActivities)
   getActivities(filteredActivities);
 
   showActivities(filteredActivities);
