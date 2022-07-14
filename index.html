@@ -17,17 +17,18 @@
         <main>
             <h1>How long to burn</h1>
 
-            <form  id="form">
-                <input type="text" placeholder="My activity" id="search" class="search">
+            <form id="form">
+                <input type="text" list="activities" placeholder="My activity" id="search" class="search">
+                <datalist id="activities"></datalist>
+                <input list="weight" placeholder="Select your weight">
+                <datalist id="weight">
+                    <option value="60 kilograms">
+                    <option value="70 kilograms">
+                    <option value="80 kilograms">
+                    <option value="90 kilograms">
+                </datalist> 
+                <button type="submit" value="Submit">Submit</button>
             </form>
-
-            <input list="weight" placeholder="Select your weight">
-            <datalist id="weight">
-                <option value="60 kilograms">
-                <option value="70 kilograms">
-                <option value="80 kilograms">
-                <option value="90 kilograms">
-            </datalist> 
         </main>
 
 
