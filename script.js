@@ -5,6 +5,9 @@
 const search = document.getElementById('search');
 const matchList = document.getElementById('activities');
 
+const searchFood = document.getElementById('search-food');
+const matchListFood = document.getElementById('nutriments');
+
 //Search JSON and filter it
 const searchActivities = async searchText => {
     const res = await fetch('./activities.json');
@@ -26,7 +29,7 @@ const searchActivities = async searchText => {
 //Show results in HTML
 const outputHtml = matches => {
     if(matches.length > 0){
-        const html = matches.map(match => `<option value="${match.Activity}">${match.Activity}</p>`
+        const html = matches.map(match => `<option value="${match.Activity}">${match.Activity}</option>`
         )
         .join('');
         matchList.innerHTML = html;
@@ -51,7 +54,9 @@ form.addEventListener('submit', (e) =>{
 })
 
 
-//FOOD API
+
+/***************FOOD API*******************/
+
 fetch(
     `https://trackapi.nutritionix.com/v2/search/instant?query=${item}`,
     {headers: {
@@ -61,7 +66,7 @@ fetch(
     }
 )
 
-const searchFood = async searchTextFood => {
+const searchForFood = async searchTextFood => {
     const res = await fetch(
         `https://trackapi.nutritionix.com/v2/search/instant?query=${item}`,
         {headers: {
@@ -84,3 +89,13 @@ const searchFood = async searchTextFood => {
     outputHtmlFood(matchesFood);
 };
 
+//Show results in HTML
+const outputHtmlFood = matchesFood => {
+    if(matchesFood.length > 0){
+        const html = matchesFood.map(matchFood => `<option value="${matchFood.tbd}">${matchFood.tbd}</p>`
+        )
+        .join('');
+        matchListFood.innerHTML = html;
+        console.log(html);
+    }
+};
