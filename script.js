@@ -6,6 +6,9 @@ const matchListFood = document.getElementById('nutriments');
 const search = document.getElementById('search');
 const matchList = document.getElementById('activities');
 
+/***************RESULT VARIABLE*************/
+const result = document.getElementById('results');
+
 
 
 /*******************************************/
@@ -34,7 +37,6 @@ const searchForFood = async searchTextFood => {
     if (searchTextFood.length === 0){
         matchesFood = [];
     }
-
     outputHtmlFood(matchesFood);
 };
 
@@ -108,3 +110,4 @@ form.addEventListener('submit', (e) =>{
 /*******************************************/
 /*************RESULTS CODE*****************/
 /*****************************************/
+
