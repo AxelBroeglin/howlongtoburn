@@ -60,3 +60,27 @@ fetch(
     },
     }
 )
+
+const searchFood = async searchTextFood => {
+    const res = await fetch(
+        `https://trackapi.nutritionix.com/v2/search/instant?query=${item}`,
+        {headers: {
+            "x-app-id": "8a5cc80d",
+            "x-app-key": "5edc678264dcbc2dd1153790ef4505f7",
+        },
+        });
+    const nutriments = await res.json();
+    //Get matches to current text input
+    let matchesFood = nutriments.filter(nutriment => {
+        const regex = new RegExp(`^${searchTextFood}`, 'gi');
+        return nutriment.Activity.match(regex);
+    });
+
+    if (searchTextFood.length === 0){
+        matchesFood = [];
+    }
+
+    // console.table(matches);
+    outputHtmlFood(matchesFood);
+};
+
