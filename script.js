@@ -49,3 +49,14 @@ form.addEventListener('submit', (e) =>{
 //         getMovies(searchURL+'&query='+searchTerm);
 //     }
 })
+
+
+//FOOD API
+fetch(
+    `https://trackapi.nutritionix.com/v2/search/instant?query=${item}`,
+    {headers: {
+        "x-app-id": "8a5cc80d",
+        "x-app-key": "5edc678264dcbc2dd1153790ef4505f7",
+    },
+    }
+)
