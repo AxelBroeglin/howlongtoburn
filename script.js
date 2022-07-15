@@ -1,12 +1,60 @@
-// const main = document.getElementById('main');
-// const dataList = document.getElementById('weight');
+/***************FOOD VARIABLES*******************/
+const searchFood = document.getElementById('search-food');
+const matchListFood = document.getElementById('nutriments');
 
-
+/***************ACTIVITIES VARIABLES*************/
 const search = document.getElementById('search');
 const matchList = document.getElementById('activities');
 
-const searchFood = document.getElementById('search-food');
-const matchListFood = document.getElementById('nutriments');
+
+
+/*******************************************/
+/***************FOOD CODE*******************/
+/*****************************************/
+
+//Get data from api from search
+const searchForFood = async searchTextFood => {
+    const res = await fetch(
+        `https://trackapi.nutritionix.com/v2/search/instant?query=${item}`,
+        {headers: {
+            "x-app-id": "8a5cc80d",
+            "x-app-key": "5edc678264dcbc2dd1153790ef4505f7",
+        },
+        });
+    const nutriments = await res.json();
+    //Get matches to current text input
+    let matchesFood = nutriments.filter(nutriment => {
+        const regex = new RegExp(`^${searchTextFood}`, 'gi');
+        return nutriment.tbd.match(regex);
+    });
+
+    if (searchTextFood.length === 0){
+        matchesFood = [];
+    }
+
+    outputHtmlFood(matchesFood);
+};
+
+//Show results in HTML
+const outputHtmlFood = matchesFood => {
+    if(matchesFood.length > 0){
+        const html = matchesFood.map(matchFood => `<option value="${matchFood.tbd}">${matchFood.tbd}</p>`
+        )
+        .join('');
+        matchListFood.innerHTML = html;
+        console.log(html);
+    }
+};
+
+/***************FOOD EVENT LISTENERS*************/
+//.............
+
+
+
+
+/*******************************************/
+/************ACTIVITIES CODE****************/
+/*****************************************/
 
 //Search JSON and filter it
 const searchActivities = async searchText => {
@@ -21,8 +69,6 @@ const searchActivities = async searchText => {
     if (searchText.length === 0){
         matches = [];
     }
-
-    // console.table(matches);
     outputHtml(matches);
 };
 
@@ -37,6 +83,8 @@ const outputHtml = matches => {
     }
 };
 
+
+/***************ACTIVITIES EVENT LISTENERS*************/
 //See how to make option disappear when clicked
 search.addEventListener('input', () => searchActivities(search.value));
 
@@ -54,48 +102,3 @@ form.addEventListener('submit', (e) =>{
 })
 
 
-
-/***************FOOD API*******************/
-
-fetch(
-    `https://trackapi.nutritionix.com/v2/search/instant?query=${item}`,
-    {headers: {
-        "x-app-id": "8a5cc80d",
-        "x-app-key": "5edc678264dcbc2dd1153790ef4505f7",
-    },
-    }
-)
-
-const searchForFood = async searchTextFood => {
-    const res = await fetch(
-        `https://trackapi.nutritionix.com/v2/search/instant?query=${item}`,
-        {headers: {
-            "x-app-id": "8a5cc80d",
-            "x-app-key": "5edc678264dcbc2dd1153790ef4505f7",
-        },
-        });
-    const nutriments = await res.json();
-    //Get matches to current text input
-    let matchesFood = nutriments.filter(nutriment => {
-        const regex = new RegExp(`^${searchTextFood}`, 'gi');
-        return nutriment.Activity.match(regex);
-    });
-
-    if (searchTextFood.length === 0){
-        matchesFood = [];
-    }
-
-    // console.table(matches);
-    outputHtmlFood(matchesFood);
-};
-
-//Show results in HTML
-const outputHtmlFood = matchesFood => {
-    if(matchesFood.length > 0){
-        const html = matchesFood.map(matchFood => `<option value="${matchFood.tbd}">${matchFood.tbd}</p>`
-        )
-        .join('');
-        matchListFood.innerHTML = html;
-        console.log(html);
-    }
-};
