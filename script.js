@@ -15,15 +15,18 @@ const matchList = document.getElementById('activities');
 //Get data from api from search
 const searchForFood = async searchTextFood => {
     const res = await fetch(
-        `https://trackapi.nutritionix.com/v2/search/instant?query=${item}`,
+        `https://trackapi.nutritionix.com/v2/search/instant?query=${searchFood.value}`,
         {headers: {
             "x-app-id": "8a5cc80d",
             "x-app-key": "5edc678264dcbc2dd1153790ef4505f7",
         },
         });
     const nutriments = await res.json();
-    //Get matches to current text input
-    let matchesFood = nutriments.filter(nutriment => {
+    console.log(nutriments.branded);
+    //OR
+    console.log(nutriments);
+    //Get matches to current text input - MADE ARRAY BECAUSE OF NUTRIMENTS NOT BEING A FUNCTION ERROR
+    let matchesFood = Array.from(nutriments).filter(nutriment => {
         const regex = new RegExp(`^${searchTextFood}`, 'gi');
         return nutriment.tbd.match(regex);
     });
@@ -47,7 +50,7 @@ const outputHtmlFood = matchesFood => {
 };
 
 /***************FOOD EVENT LISTENERS*************/
-//.............
+searchFood.addEventListener('input', () => searchForFood(searchFood.value));
 
 
 
