@@ -31,14 +31,14 @@ const searchForFood = async searchTextFood => {
     //Get matches to current text input - MADE ARRAY BECAUSE OF NUTRIMENTS NOT BEING A FUNCTION ERROR
     let matchesFood = Array.from(nutriments).filter(nutriment => {
         const regex = new RegExp(`^${searchTextFood}`, 'gi');
-        console.log(matchesFood)
+        console.log(searchTextFood)
         return nutriment.branded.match(regex);
     });
     
     if (searchTextFood.length === 0){
         matchesFood = [];
     }
-    matchesFood = nutriments.branded;
+
     outputHtmlFood(matchesFood);
 };
 
@@ -46,7 +46,7 @@ const searchForFood = async searchTextFood => {
 const outputHtmlFood = matchesFood => {
     if(matchesFood.length > 0){
         matchListFood = [];
-        console.log(matchFood)
+        console.log(matchesFood)
         const html = matchesFood.map(matchFood => `<option value="${matchFood}">${matchFood}</p>`
         )
         .join('');
