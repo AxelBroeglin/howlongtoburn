@@ -1,6 +1,6 @@
 /***************FOOD VARIABLES*******************/
 const searchFood = document.getElementById('search-food');
-const matchListFood = document.getElementById('nutriments');
+let matchListFood = document.getElementById('food');
 
 /***************ACTIVITIES VARIABLES*************/
 const search = document.getElementById('search');
@@ -38,17 +38,21 @@ const searchForFood = async searchTextFood => {
     if (searchTextFood.length === 0){
         matchesFood = [];
     }
+    matchesFood = nutriments.branded;
     outputHtmlFood(matchesFood);
 };
 
 //Show results in HTML
 const outputHtmlFood = matchesFood => {
     if(matchesFood.length > 0){
-        const html = matchesFood.map(matchFood => `<option value="${matchFood.tbd}">${matchFood.tbd}</p>`
+        matchListFood = [];
+        console.log(matchFood)
+        const html = matchesFood.map(matchFood => `<option value="${matchFood}">${matchFood}</p>`
         )
         .join('');
-        matchListFood.innerHTML = html;
-        console.log(html);
+        console.log(matchListFood);
+        matchListFood.innerHTML = html;   
+        console.log(matchListFood);
     }
 };
 
