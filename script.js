@@ -26,14 +26,15 @@ const searchForFood = async searchTextFood => {
         });
     const nutriments = await res.json();
     console.log(nutriments.branded);
-    //OR
-    console.log(nutriments);
+    console.log(nutriments.branded[1].food_name)
+
     //Get matches to current text input - MADE ARRAY BECAUSE OF NUTRIMENTS NOT BEING A FUNCTION ERROR
     let matchesFood = Array.from(nutriments).filter(nutriment => {
         const regex = new RegExp(`^${searchTextFood}`, 'gi');
-        return nutriment.tbd.match(regex);
+        console.log(matchesFood)
+        return nutriment.branded.match(regex);
     });
-
+    
     if (searchTextFood.length === 0){
         matchesFood = [];
     }
