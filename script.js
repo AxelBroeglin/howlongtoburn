@@ -25,29 +25,31 @@ const searchForFood = async searchTextFood => {
         },
         });
     const nutriments = await res.json();
+    
     console.log(nutriments.branded);
     console.log(nutriments.branded[1].food_name)
 
     //Get matches to current text input - MADE ARRAY BECAUSE OF NUTRIMENTS NOT BEING A FUNCTION ERROR
-    let matchesFood = Array.from(nutriments).filter(nutriment => {
-        const regex = new RegExp(`^${searchTextFood}`, 'gi');
-        console.log(searchTextFood)
-        return nutriment.branded.match(regex);
-    });
+    // let matchesFood = Array.from(nutriments).filter(nutriment => {
+    //     const regex = new RegExp(`^${searchTextFood}`, 'gi');
+    //     console.log(searchTextFood)
+    //     return nutriment.match(regex);
+    // });
     
-    if (searchTextFood.length === 0){
-        matchesFood = [];
-    }
+    // if (searchTextFood.gth === 0){
+    //     matchesFood = [];
+    // }
 
-    outputHtmlFood(matchesFood);
+    outputHtmlFood(Array.from(nutriments));
 };
 
 //Show results in HTML
-const outputHtmlFood = matchesFood => {
-    if(matchesFood.length > 0){
+const outputHtmlFood = nutriments => {
+    console.log(nutriments)
+    if(nutriments.length > 0){
         matchListFood = [];
-        console.log(matchesFood)
-        const html = matchesFood.map(matchFood => `<option value="${matchFood}">${matchFood}</p>`
+        console.log(nutriments)
+        const html = nutriments.map(matchFood => `<option value="${matchFood}">${matchFood}</p>`
         )
         .join('');
         console.log(matchListFood);
