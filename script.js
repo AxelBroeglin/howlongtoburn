@@ -1,11 +1,10 @@
 /***************FOOD VARIABLES*******************/
 const searchFood = document.getElementById('search-food');
 const matchListFood = document.getElementById('food');
-const defaultFood = document.getElementById('defaultFood');
+let foodCalories = document.getElementById('food-calories');
 /***************ACTIVITIES VARIABLES*************/
 const search = document.getElementById('search');
 const matchList = document.getElementById('activities');
-const defaultActivity = document.getElementById('defaultActivity');
 /***************RESULT VARIABLE*************/
 const results = document.getElementById('results');
 
@@ -100,7 +99,7 @@ function calcResults(){
         results.innerHTML= 'Please fill in the form'
         console.log('test2') //ok
     }else{
-        results.innerHTML= 'Results'
+        foodCalories.innerHTML= '100 grams = '+matchListFood.value;
         console.log('test3')
     }
 }
@@ -112,3 +111,7 @@ form.addEventListener('submit', (e) =>{
     e.preventDefault();
     calcResults();
 })
+
+//Issue with "fill in the form"
+//The number of calories should be shown when food is selected, not on sumbit
+//foodCalories.innerHTML= '100 grams = '+matchListFood.value; must be moved to the right place in order to get the right value
