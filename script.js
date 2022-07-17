@@ -8,6 +8,8 @@ const matchList = document.getElementById('activities');
 /***************RESULT VARIABLE*************/
 const results = document.getElementById('results');
 
+
+console.log(document.querySelectorAll('[data-kcal]'))
 /*******************************************/
 /***************FOOD CODE*******************/
 /*****************************************/
@@ -33,12 +35,16 @@ const outputHtmlFood = nutriments => {
         html.push(`<option class='options-food' data-kcal="${nutriments[i].nf_calories}">${nutriments[i].food_name}</option>`)
         matchListFood.innerHTML = html;
         //html = matchListFood.join('');
-        //console.log(html)
+        console.log(html)
         matchListFood.innerHTML = html;
+        matchListFood.addEventListener('click', () => foodCalories.innerHTML = `100 grams of ${food.value} equals ${food.value} kcal`);
+        
+        
+        //Shows every el with kcal
+        console.log(document.querySelectorAll('[data-kcal]'))
     }
     //EventListener works but can't use ${} to retrieve data
-    matchListFood.addEventListener('change', () => foodCalories.innerHTML = `100 grams of` );
-    console.log(matchListFood.value)
+
 
 }
 
@@ -112,3 +118,5 @@ form.addEventListener('submit', (e) =>{
 //Issue with "fill in the form"
 //The number of calories should be shown when food is selected, not on sumbit
 //foodCalories.innerHTML= '100 grams = '+matchListFood.value; must be moved to the right place in order to get the right value
+
+console.log(document.querySelectorAll('[data-kcal]'))
