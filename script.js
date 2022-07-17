@@ -1,11 +1,11 @@
 /***************FOOD VARIABLES*******************/
 const searchFood = document.getElementById('search-food');
 const matchListFood = document.getElementById('food');
-
+const defaultFood = document.getElementById('defaultFood');
 /***************ACTIVITIES VARIABLES*************/
 const search = document.getElementById('search');
 const matchList = document.getElementById('activities');
-
+const defaultActivity = document.getElementById('defaultActivity');
 /***************RESULT VARIABLE*************/
 const result = document.getElementById('results');
 
@@ -27,23 +27,12 @@ const searchForFood = async searchTextFood => {
     let nutriments = await res.json();
     nutriments=Array.from(nutriments.branded);    
     console.log(nutriments)
-    //Get matches to current text input - MADE ARRAY BECAUSE OF NUTRIMENTS NOT BEING A FUNCTION ERROR
-    // let matchesFood = Array.from(nutriments).filter(nutriment => {
-    //     const regex = new RegExp(`^${searchTextFood}`, 'gi');
-    //     console.log(searchTextFood)
-    //     return nutriment.match(regex);
-    // });
-    
-    // if (searchTextFood.gth === 0){
-    //     matchesFood = [];
-    // }
-    
+
     outputHtmlFood(nutriments);
 };
 
 //Show results in HTML
 const outputHtmlFood = nutriments => {
-    //Kind of works ?
     let html = [];
     for (let i = 0; i < 10; i++) {
         html.push(`<option data-kcal="${nutriments[i].nf_calories}">${nutriments[i].food_name}</option>`)
@@ -56,8 +45,13 @@ const outputHtmlFood = nutriments => {
       
       console.log(matchListFood)
     }
+
+
 /***************FOOD EVENT LISTENERS*************/
 searchFood.addEventListener('input', () => searchForFood(searchFood.value));
+
+
+
 
 
 /*******************************************/
@@ -96,20 +90,24 @@ const outputHtml = matches => {
 //See how to make option disappear when clicked
 search.addEventListener('input', () => searchActivities(search.value));
 
-//Eventlistener for button
-form.addEventListener('submit', (e) =>{
-    e.preventDefault();
-    console.log('test') //ok
-
-
-//     const searchTerm = search.value;
-
-//     if(searchTerm) {
-//         getMovies(searchURL+'&query='+searchTerm);
-//     }
-})
-
 
 /*******************************************/
 /*************RESULTS CODE*****************/
 /*****************************************/
+
+function calcResults(){
+    if(defaultActivity.defaultSelected || defaultFood.defaultSelected){
+        result.innerHTML= 'Please fill in the form'
+        console.log('test2') //ok
+    }
+    console.log('test') //ok
+    matchList
+}
+
+
+/***************RESULTS EVENT LISTENERS*************/
+//Eventlistener for button
+form.addEventListener('submit', (e) =>{
+    e.preventDefault();
+    calcResults();
+})
