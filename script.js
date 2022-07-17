@@ -1,6 +1,6 @@
 /***************FOOD VARIABLES*******************/
 const searchFood = document.getElementById('search-food');
-let matchListFood = document.getElementById('food');
+const matchListFood = Array.from(document.getElementById('food'));
 
 /***************ACTIVITIES VARIABLES*************/
 const search = document.getElementById('search');
@@ -24,10 +24,7 @@ const searchForFood = async searchTextFood => {
             "x-app-key": "5edc678264dcbc2dd1153790ef4505f7",
         },
         });
-    const nutriments = await res.json();
-    
-    console.log(nutriments.branded);
-    console.log(nutriments.branded[1].food_name)
+    let nutriments = await res.json();
 
     //Get matches to current text input - MADE ARRAY BECAUSE OF NUTRIMENTS NOT BEING A FUNCTION ERROR
     // let matchesFood = Array.from(nutriments).filter(nutriment => {
@@ -40,22 +37,22 @@ const searchForFood = async searchTextFood => {
     //     matchesFood = [];
     // }
 
-    outputHtmlFood(Array.from(nutriments));
+    outputHtmlFood(nutriments);
 };
 
 //Show results in HTML
-const outputHtmlFood = nutriments => {
-    console.log(nutriments)
-    if(nutriments.length > 0){
-        matchListFood = [];
-        console.log(nutriments)
-        const html = nutriments.map(matchFood => `<option value="${matchFood}">${matchFood}</p>`
-        )
-        .join('');
-        console.log(matchListFood);
-        matchListFood.innerHTML = html;   
-        console.log(matchListFood);
-    }
+function outputHtmlFood(nutriments){
+    console.log(nutriments.branded[1].food_name)
+
+    console.log(matchListFood)
+    //This gives object object, need better loop.
+    const html = Array.from(nutriments).map(nutriments => `<option value="${nutriments}">${nutriments}</option>`
+    )
+    .join('');
+    console.log(matchListFood);
+    //This gives object object :
+    matchListFood.innerHTML = html;   
+    console.log(matchListFood);
 };
 
 /***************FOOD EVENT LISTENERS*************/
