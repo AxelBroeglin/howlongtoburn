@@ -7,7 +7,7 @@ const search = document.getElementById('search');
 const matchList = document.getElementById('activities');
 const defaultActivity = document.getElementById('defaultActivity');
 /***************RESULT VARIABLE*************/
-const result = document.getElementById('results');
+const results = document.getElementById('results');
 
 
 
@@ -96,12 +96,13 @@ search.addEventListener('input', () => searchActivities(search.value));
 /*****************************************/
 
 function calcResults(){
-    if(defaultActivity.defaultSelected || defaultFood.defaultSelected){
-        result.innerHTML= 'Please fill in the form'
+    if(matchListFood.value=='' || matchList.value==''){
+        results.innerHTML= 'Please fill in the form'
         console.log('test2') //ok
+    }else{
+        results.innerHTML= 'Results'
+        console.log('test3')
     }
-    console.log('test') //ok
-    matchList
 }
 
 

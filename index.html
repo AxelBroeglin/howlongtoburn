@@ -19,20 +19,22 @@
 
             <!----- Food form ----->
             <form>
-                <input type="text" list="food" placeholder="My food" id="search-food" class="search">
-                <datalist id="food">
+                <div>Select your food :</div>
+                <input type="text" list="food" id="search-food" class="search">
+                <select id="food">
                     <option id="defaultFood" selected></option>
-                </datalist>
+                </select>
                 <input placeholder="How much ? (in grams)">
             </form>
 
 
             <!----- Activities form ----->
             <form id="form">
-                <input type="text" list="activities" placeholder="My activity" id="search" class="search">
-                <datalist id="activities">
+                 <div>Select your activity :</div>
+                <input type="text" list="activities" id="search" class="search">
+                <select id="activities">
                     <option id="defaultActivity" selected></option>
-                </datalist>
+                </select>
                 <input list="weight" placeholder="Select your weight">
                 <datalist id="weight">
                     <option value="60 kilograms">
@@ -43,7 +45,7 @@
                 <button type="submit" value="Submit">Submit</button>
             </form>
 
-            
+
             <!----- Results ----->
             <div>
                 <p id="results"></p>
