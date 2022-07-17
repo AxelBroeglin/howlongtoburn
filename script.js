@@ -25,7 +25,8 @@ const searchForFood = async searchTextFood => {
         },
         });
     let nutriments = await res.json();
-
+    nutriments=Array.from(nutriments.branded);    
+    console.log(nutriments)
     //Get matches to current text input - MADE ARRAY BECAUSE OF NUTRIMENTS NOT BEING A FUNCTION ERROR
     // let matchesFood = Array.from(nutriments).filter(nutriment => {
     //     const regex = new RegExp(`^${searchTextFood}`, 'gi');
@@ -36,24 +37,33 @@ const searchForFood = async searchTextFood => {
     // if (searchTextFood.gth === 0){
     //     matchesFood = [];
     // }
-
+    
     outputHtmlFood(nutriments);
 };
 
 //Show results in HTML
-function outputHtmlFood(nutriments){
-    console.log(nutriments.branded[1].food_name)
+const outputHtmlFood = nutriments => {
+    for (let i = 0; i < 10; i++) {
+        const html = `<option value="${nutriments[i].nf_calories}">${nutriments[i].food_name}</option>`;
+        matchListFood.innerHTML = html;
+        console.log(html)
+      }
+    // const html = nutriments.map(nutriment => `<option value="${nutriment}">${nutriment}</option>`).join('');
+    // console.log(nutriments[1].food_name)
+    // matchListFood.innerHTML = html;
+}
+// function outputHtmlFood(nutriments){
+//     console.log(nutriments.branded[1].food_name)
 
-    console.log(matchListFood)
-    //This gives object object, need better loop.
-    const html = Array.from(nutriments).map(nutriments => `<option value="${nutriments}">${nutriments}</option>`
-    )
-    .join('');
-    console.log(matchListFood);
-    //This gives object object :
-    matchListFood.innerHTML = html;   
-    console.log(matchListFood);
-};
+//     console.log(matchListFood)
+//     //This gives object object, need better loop.
+//     const html = Array.from(nutriments).map(nutriment => `<option value="${nutriment}">${nutriment}</option>`
+//     ).join('');
+//     console.log(matchListFood);
+//     //This gives object object :
+//     matchListFood.innerHTML = html;   
+//     console.log(matchListFood);
+// };
 
 /***************FOOD EVENT LISTENERS*************/
 searchFood.addEventListener('input', () => searchForFood(searchFood.value));
