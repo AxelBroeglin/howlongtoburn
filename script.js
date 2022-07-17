@@ -8,8 +8,6 @@ const matchList = document.getElementById('activities');
 /***************RESULT VARIABLE*************/
 const results = document.getElementById('results');
 
-let optionsFood = document.querySelectorAll('.options-food');
-console.log(optionsFood)
 /*******************************************/
 /***************FOOD CODE*******************/
 /*****************************************/
@@ -37,16 +35,12 @@ const outputHtmlFood = nutriments => {
         //html = matchListFood.join('');
         //console.log(html)
         matchListFood.innerHTML = html;
-        console.log(optionsFood)
     }
-    optionsFood.forEach(optionFood =>
-        optionFood.addEventListener('click', (e) =>{
-            console.log('test')
-        }))
-        console.log(optionsFood)
-        
-      //console.log(matchListFood)
-    }
+    //EventListener works but can't use ${} to retrieve data
+    matchListFood.addEventListener('change', () => foodCalories.innerHTML = `100 grams of` );
+    console.log(matchListFood.value)
+
+}
 
 
 /***************FOOD EVENT LISTENERS*************/
