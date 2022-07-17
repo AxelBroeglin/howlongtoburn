@@ -1,6 +1,6 @@
 /***************FOOD VARIABLES*******************/
 const searchFood = document.getElementById('search-food');
-const matchListFood = Array.from(document.getElementById('food'));
+const matchListFood = document.getElementById('food');
 
 /***************ACTIVITIES VARIABLES*************/
 const search = document.getElementById('search');
@@ -43,32 +43,21 @@ const searchForFood = async searchTextFood => {
 
 //Show results in HTML
 const outputHtmlFood = nutriments => {
+    //Kind of works ?
+    let html = [];
     for (let i = 0; i < 10; i++) {
-        const html = `<option value="${nutriments[i].nf_calories}">${nutriments[i].food_name}</option>`;
+        html.push(`<option data-kcal="${nutriments[i].nf_calories}">${nutriments[i].food_name}</option>`)
         matchListFood.innerHTML = html;
+        //html = matchListFood.join('');
         console.log(html)
+        matchListFood.innerHTML = html;
+        console.log(matchListFood.innerHTML)
       }
-    // const html = nutriments.map(nutriment => `<option value="${nutriment}">${nutriment}</option>`).join('');
-    // console.log(nutriments[1].food_name)
-    // matchListFood.innerHTML = html;
-}
-// function outputHtmlFood(nutriments){
-//     console.log(nutriments.branded[1].food_name)
-
-//     console.log(matchListFood)
-//     //This gives object object, need better loop.
-//     const html = Array.from(nutriments).map(nutriment => `<option value="${nutriment}">${nutriment}</option>`
-//     ).join('');
-//     console.log(matchListFood);
-//     //This gives object object :
-//     matchListFood.innerHTML = html;   
-//     console.log(matchListFood);
-// };
-
+      
+      console.log(matchListFood)
+    }
 /***************FOOD EVENT LISTENERS*************/
 searchFood.addEventListener('input', () => searchForFood(searchFood.value));
-
-
 
 
 /*******************************************/
@@ -124,4 +113,3 @@ form.addEventListener('submit', (e) =>{
 /*******************************************/
 /*************RESULTS CODE*****************/
 /*****************************************/
-
