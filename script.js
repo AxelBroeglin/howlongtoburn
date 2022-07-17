@@ -8,8 +8,8 @@ const matchList = document.getElementById('activities');
 /***************RESULT VARIABLE*************/
 const results = document.getElementById('results');
 
-
-
+let optionsFood = document.querySelectorAll('.options-food');
+console.log(optionsFood)
 /*******************************************/
 /***************FOOD CODE*******************/
 /*****************************************/
@@ -25,8 +25,6 @@ const searchForFood = async searchTextFood => {
         });
     let nutriments = await res.json();
     nutriments=Array.from(nutriments.branded);    
-    console.log(nutriments)
-
     outputHtmlFood(nutriments);
 };
 
@@ -34,15 +32,20 @@ const searchForFood = async searchTextFood => {
 const outputHtmlFood = nutriments => {
     let html = [];
     for (let i = 0; i < 10; i++) {
-        html.push(`<option data-kcal="${nutriments[i].nf_calories}">${nutriments[i].food_name}</option>`)
+        html.push(`<option class='options-food' data-kcal="${nutriments[i].nf_calories}">${nutriments[i].food_name}</option>`)
         matchListFood.innerHTML = html;
         //html = matchListFood.join('');
-        console.log(html)
+        //console.log(html)
         matchListFood.innerHTML = html;
-        console.log(matchListFood.innerHTML)
-      }
-      
-      console.log(matchListFood)
+        console.log(optionsFood)
+    }
+    optionsFood.forEach(optionFood =>
+        optionFood.addEventListener('click', (e) =>{
+            console.log('test')
+        }))
+        console.log(optionsFood)
+        
+      //console.log(matchListFood)
     }
 
 
