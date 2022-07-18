@@ -67,7 +67,7 @@ const searchActivities = async searchText => {
 //Show results in HTML
 const outputHtml = matches => {
     if(matches.length > 0){
-        const html = matches.map(match => `<option value="${match.Activity}">${match.Activity}</option>`
+        const html = matches.map(match => `<option value="${match.Activity}">${match.Activity} - ${match.kgs}</option>`
         )
         .join('');
         matchList.innerHTML = html;
@@ -131,3 +131,5 @@ form.addEventListener('submit', (e) =>{
 })
 
 //ASYNC AWAIT ?
+let burntCal = weight.value;
+console.log(burntCal)
