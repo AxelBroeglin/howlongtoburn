@@ -38,16 +38,10 @@ const outputHtmlFood = nutriments => {
         matchListFood.addEventListener('click', () =>{
             let kcal = food.value.slice(-4);
             foodCalories.innerHTML = `100 grams of ${food.value.slice(0, -4)} equals ${kcal} kcal`;
-            return kcal;
         })
     }
     
 }
-
-
-
-
-
 
 
 /*******************************************/
@@ -86,12 +80,17 @@ const outputHtml = matches => {
 /*************RESULTS CODE*****************/
 /*****************************************/
 
-function calcResults(){
+function calcResults(kcal,burntCal){
+    let timeToBurn = (kcal*burntCal) * 60;
+    displayResults(timeToBurn)
+}
+
+function displayResults(timeToBurn){
     if(matchListFood.value=='' || matchList.value==''){
         results.innerHTML= 'Please fill in the form'
         console.log('test2') //ok
     }else{
-        console.log('test3')
+        results.innerhtml = `It would take ${timeToBurn} minutes to burn 100 grams of `
     }
 }
 
@@ -116,5 +115,9 @@ search.addEventListener('input', () => searchActivities(search.value));
 //Eventlistener for button
 form.addEventListener('submit', (e) =>{
     e.preventDefault();
+    let burntCal = weight.value;
+    console.log(burntCal)
     calcResults();
 })
+
+//ASYNC AWAIT ?
