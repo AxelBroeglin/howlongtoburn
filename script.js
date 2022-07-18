@@ -9,7 +9,6 @@ const matchList = document.getElementById('activities');
 const results = document.getElementById('results');
 
 
-console.log(document.querySelectorAll('[data-kcal]'))
 /*******************************************/
 /***************FOOD CODE*******************/
 /*****************************************/
@@ -28,30 +27,29 @@ const searchForFood = async searchTextFood => {
     outputHtmlFood(nutriments);
 };
 
+
+
 //Show results in HTML
 const outputHtmlFood = nutriments => {
     let html = [];
     for (let i = 0; i < 10; i++) {
-        html.push(`<option class='options-food' data-kcal="${nutriments[i].nf_calories}">${nutriments[i].food_name}</option>`)
+        html.push(`<option class='options-food'>${nutriments[i].food_name} - ${nutriments[i].nf_calories}</option>`)
         matchListFood.innerHTML = html;
-        //html = matchListFood.join('');
         console.log(html)
         matchListFood.innerHTML = html;
-        matchListFood.addEventListener('click', () => foodCalories.innerHTML = `100 grams of ${food.value} equals ${food.value} kcal`);
         
-        
-        //Shows every el with kcal
-        console.log(document.querySelectorAll('[data-kcal]'))
-    }
-    //EventListener works but can't use ${} to retrieve data
-
-
-}
+        matchListFood.addEventListener('click', () =>{
+            let kcal = food.value.slice(-3);
+            foodCalories.innerHTML = `100 grams of ${food.value.slice(0, -4)} equals ${kcal} kcal`;
+        })
+    }}
 
 
 /***************FOOD EVENT LISTENERS*************/
-searchFood.addEventListener('input', () => searchForFood(searchFood.value));
-
+searchFood.addEventListener('input', (e) =>{
+    searchForFood(searchFood.value); 
+    }
+)
 
 
 
@@ -83,7 +81,6 @@ const outputHtml = matches => {
         )
         .join('');
         matchList.innerHTML = html;
-        console.log(html);
     }
 };
 
@@ -118,5 +115,3 @@ form.addEventListener('submit', (e) =>{
 //Issue with "fill in the form"
 //The number of calories should be shown when food is selected, not on sumbit
 //foodCalories.innerHTML= '100 grams = '+matchListFood.value; must be moved to the right place in order to get the right value
-
-console.log(document.querySelectorAll('[data-kcal]'))
