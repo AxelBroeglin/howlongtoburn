@@ -36,17 +36,16 @@ const outputHtmlFood = nutriments => {
         html.push(`<option class='options-food'>${nutriments[i].food_name} - ${nutriments[i].nf_calories}</option>`)
         matchListFood.innerHTML = html;        
         matchListFood.addEventListener('click', () =>{
-            let kcal = food.value.slice(-3);
+            let kcal = food.value.slice(-4);
             foodCalories.innerHTML = `100 grams of ${food.value.slice(0, -4)} equals ${kcal} kcal`;
+            return kcal;
         })
-    }}
-
-
-/***************FOOD EVENT LISTENERS*************/
-searchFood.addEventListener('input', (e) =>{
-    searchForFood(searchFood.value); 
     }
-)
+    
+}
+
+
+
 
 
 
@@ -82,10 +81,6 @@ const outputHtml = matches => {
 };
 
 
-/***************ACTIVITIES EVENT LISTENERS*************/
-//See how to make option disappear when clicked
-search.addEventListener('input', () => searchActivities(search.value));
-
 
 /*******************************************/
 /*************RESULTS CODE*****************/
@@ -96,19 +91,30 @@ function calcResults(){
         results.innerHTML= 'Please fill in the form'
         console.log('test2') //ok
     }else{
-        foodCalories.innerHTML= '100 grams = '+matchListFood.value;
         console.log('test3')
     }
 }
 
 
-/***************RESULTS EVENT LISTENERS*************/
+
+
+/*******************************************/
+/*************EVENT LISTENERS**************/
+/*****************************************/
+
+/**********FOOD EVENT LISTENERS*********/
+searchFood.addEventListener('input', (e) =>{
+    searchForFood(searchFood.value); 
+    }
+)
+
+/******ACTIVITIES EVENT LISTENERS******/
+//See how to make option disappear when clicked
+search.addEventListener('input', () => searchActivities(search.value));
+
+/*******RESULTS EVENT LISTENERS******/
 //Eventlistener for button
 form.addEventListener('submit', (e) =>{
     e.preventDefault();
     calcResults();
 })
-
-//Issue with "fill in the form"
-//The number of calories should be shown when food is selected, not on sumbit
-//foodCalories.innerHTML= '100 grams = '+matchListFood.value; must be moved to the right place in order to get the right value
