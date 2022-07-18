@@ -80,12 +80,12 @@ const outputHtml = matches => {
 /*************RESULTS CODE*****************/
 /*****************************************/
 
-function calcResults(kcal,burntCal){
+const calcResults = function(kcal,burntCal){
     let timeToBurn = (kcal*burntCal) * 60;
     displayResults(timeToBurn)
 }
 
-function displayResults(timeToBurn){
+const displayResults = function (timeToBurn){
     if(matchListFood.value=='' || matchList.value==''){
         results.innerHTML= 'Please fill in the form'
         console.log('test2') //ok
@@ -95,6 +95,16 @@ function displayResults(timeToBurn){
 }
 
 
+// const calcResults = function (kcal, burntCal){
+//     let timeToBurn = (kcal*burntCal) * 60;
+//     return timeToBurn;
+// }
+
+// const displayResults(timeToBurn){
+//     const resultOfCalc = calcResults()
+// }
+
+// displayResults(*kcal, *burntCal)
 
 
 /*******************************************/
