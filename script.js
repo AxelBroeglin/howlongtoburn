@@ -34,10 +34,7 @@ const outputHtmlFood = nutriments => {
     let html = [];
     for (let i = 0; i < 10; i++) {
         html.push(`<option class='options-food'>${nutriments[i].food_name} - ${nutriments[i].nf_calories}</option>`)
-        matchListFood.innerHTML = html;
-        console.log(html)
-        matchListFood.innerHTML = html;
-        
+        matchListFood.innerHTML = html;        
         matchListFood.addEventListener('click', () =>{
             let kcal = food.value.slice(-3);
             foodCalories.innerHTML = `100 grams of ${food.value.slice(0, -4)} equals ${kcal} kcal`;
