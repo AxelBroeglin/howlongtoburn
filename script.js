@@ -5,10 +5,11 @@ let foodCalories = document.getElementById('food-calories');
 /***************ACTIVITIES VARIABLES*************/
 const search = document.getElementById('search');
 const matchList = document.getElementById('activities');
+let weight = document.getElementById('weight');
 /***************RESULT VARIABLE*************/
 const results = document.getElementById('results');
 
-
+console.log(weight.value)
 /*******************************************/
 /***************FOOD CODE*******************/
 /*****************************************/
@@ -67,7 +68,8 @@ const searchActivities = async searchText => {
 //Show results in HTML
 const outputHtml = matches => {
     if(matches.length > 0){
-        const html = matches.map(match => `<option value="${match.Activity}">${match.Activity} - ${match.kgs}</option>`
+        weight = weight.value
+        const html = matches.map(match => `<option value="${match.Activity}">${match.Activity}</option>`
         )
         .join('');
         matchList.innerHTML = html;
@@ -120,6 +122,7 @@ searchFood.addEventListener('input', (e) =>{
 /******ACTIVITIES EVENT LISTENERS******/
 //See how to make option disappear when clicked
 search.addEventListener('input', () => searchActivities(search.value));
+weight.addEventListener('input', () => console.log(weight.value));
 
 /*******RESULTS EVENT LISTENERS******/
 //Eventlistener for button
