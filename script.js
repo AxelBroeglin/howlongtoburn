@@ -58,16 +58,12 @@ const searchActivities = async searchText => {
         const regex = new RegExp(`^${searchText}`, 'gi');
         return sport.Activity.match(regex);
     });
-    
-    
-    //Need to get info for cal from json
-
-
-
     if (searchText.length === 0){
-        matches = [];
-    }
+            matches = [];
+        }
+    let kcalForKgs = matches;
     outputHtml(matches);
+    burntCalCalc(kcalForKgs);
 };
 
 //Show results in HTML
@@ -82,7 +78,10 @@ const outputHtml = matches => {
     }
 };
 
+const burntCalCalc = kcalForKgs => {
 
+    console.log(activities.value);
+}
 
 /*******************************************/
 /*************RESULTS CODE*****************/
@@ -130,6 +129,7 @@ searchFood.addEventListener('input', (e) =>{
 /******ACTIVITIES EVENT LISTENERS******/
 //See how to make option disappear when clicked
 search.addEventListener('input', () => searchActivities(search.value));
+matchList.addEventListener('input', () => burntCalCalc(activities.value))
 weight.addEventListener('input', () => console.log(weight));
 
 /*******RESULTS EVENT LISTENERS******/
