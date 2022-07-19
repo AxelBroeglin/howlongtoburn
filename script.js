@@ -79,8 +79,18 @@ const outputHtml = matches => {
 };
 
 const burntCalCalc = kcalForKgs => {
+    //Need to use if x is set => do this, otherwise returns several undefined or not a function (because burntCalCalc does not have the input yet)
 
-    console.log(activities.value);
+    //function gets the filtered results of search for activity
+    console.log(kcalForKgs)
+    //function gets the value of the weight
+    console.log(weight.value)
+    //need to filter kcalForKgs, look for the weight.value == selected activity
+    let actiVal = activities.value; 
+    kcalForKgs.filter(cal => {
+        console.log(kcalForKgs.match(actiVal.kgs60));
+    })
+    console.log(kcalForKgs);
 }
 
 /*******************************************/
@@ -130,7 +140,7 @@ searchFood.addEventListener('input', (e) =>{
 //See how to make option disappear when clicked
 search.addEventListener('input', () => searchActivities(search.value));
 matchList.addEventListener('input', () => burntCalCalc(activities.value))
-weight.addEventListener('input', () => console.log(weight));
+weight.addEventListener('input', () => burntCalCalc(weight.value));
 
 /*******RESULTS EVENT LISTENERS******/
 //Eventlistener for button
