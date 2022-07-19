@@ -85,7 +85,6 @@ const outputHtml = matches => {
 const calcResults = function(kcal,burntCal){
     let timeToBurn = (kcal*burntCal) * 60;
     console.log(timeToBurn)
-
     displayResults(timeToBurn)
 }
 
