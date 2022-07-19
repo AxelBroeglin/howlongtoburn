@@ -58,6 +58,11 @@ const searchActivities = async searchText => {
         const regex = new RegExp(`^${searchText}`, 'gi');
         return sport.Activity.match(regex);
     });
+    
+    
+    //Need to get info for cal from json
+
+
 
     if (searchText.length === 0){
         matches = [];
@@ -69,6 +74,7 @@ const searchActivities = async searchText => {
 const outputHtml = matches => {
     if(matches.length > 0){
         weight = weight.value
+        console.log(weight)
         const html = matches.map(match => `<option value="${match.Activity}">${match.Activity}</option>`
         )
         .join('');
