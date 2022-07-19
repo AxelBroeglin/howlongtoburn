@@ -7,9 +7,10 @@ const search = document.getElementById('search');
 const matchList = document.getElementById('activities');
 let weight = document.getElementById('weight');
 /***************RESULT VARIABLE*************/
+let burntCal = weight.value;
 const results = document.getElementById('results');
 
-console.log(weight.value)
+
 /*******************************************/
 /***************FOOD CODE*******************/
 /*****************************************/
@@ -41,7 +42,6 @@ const outputHtmlFood = nutriments => {
             foodCalories.innerHTML = `100 grams of ${food.value.slice(0, -4)} equals ${kcal} kcal`;
         })
     }
-    
 }
 
 
@@ -84,6 +84,8 @@ const outputHtml = matches => {
 
 const calcResults = function(kcal,burntCal){
     let timeToBurn = (kcal*burntCal) * 60;
+    console.log(timeToBurn)
+
     displayResults(timeToBurn)
 }
 
@@ -92,6 +94,7 @@ const displayResults = function (timeToBurn){
         results.innerHTML= 'Please fill in the form'
         console.log('test2') //ok
     }else{
+        console.log(timeToBurn)
         results.innerhtml = `It would take ${timeToBurn} minutes to burn 100 grams of `
     }
 }
@@ -122,17 +125,15 @@ searchFood.addEventListener('input', (e) =>{
 /******ACTIVITIES EVENT LISTENERS******/
 //See how to make option disappear when clicked
 search.addEventListener('input', () => searchActivities(search.value));
-weight.addEventListener('input', () => console.log(weight.value));
+weight.addEventListener('input', () => console.log(weight));
 
 /*******RESULTS EVENT LISTENERS******/
 //Eventlistener for button
+
+console.log(burntCal)
 form.addEventListener('submit', (e) =>{
     e.preventDefault();
-    let burntCal = weight.value;
     console.log(burntCal);
-    calcResults()//kcal of the product, calories consummed by excercise for the weight;
+    calcResults(food.value.slice(-4), burntCal)
 })
 
-//ASYNC AWAIT ?
-let burntCal = weight.value;
-console.log(burntCal)
