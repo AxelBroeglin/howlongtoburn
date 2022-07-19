@@ -129,8 +129,8 @@ weight.addEventListener('input', () => console.log(weight.value));
 form.addEventListener('submit', (e) =>{
     e.preventDefault();
     let burntCal = weight.value;
-    console.log(burntCal)
-    calcResults();
+    console.log(burntCal);
+    calcResults()//kcal of the product, calories consummed by excercise for the weight;
 })
 
 //ASYNC AWAIT ?
