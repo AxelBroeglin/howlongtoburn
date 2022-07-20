@@ -79,16 +79,27 @@ const outputHtml = matches => {
         )
         .join('');
         matchList.innerHTML = html;
+
+
     }
 };
+
+matchList.addEventListener('click', () =>{
+    console.log(matchList.value)
+    let burntCal = '';
+    //foodCalories.innerHTML = `100 grams of ${food.value.slice(0, -4)} equals ${kcal} kcal`;
+    //kcalValue(kcal);
+})
+
 
 const burntCalCalc = kcalForKgs => {
     //Need to use if x is set => do this, otherwise returns several undefined or not a function (because burntCalCalc does not have the input yet)
 
     //function gets the filtered results of search for activity
-    console.log(kcalForKgs)
+    //console.log(kcalForKgs)
+    
     //function gets the value of the weight
-    console.log(weight.value)
+    //console.log(weight.value)
     //need to filter kcalForKgs, look for the weight.value == selected activity
     let actiVal = activities.value; 
     kcalForKgs.filter(cal => {
