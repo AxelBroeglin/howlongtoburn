@@ -78,7 +78,7 @@ const outputHtml = matches => {
         const html = matches.map(match => `<option value="${match.Activity}">${match.kgs60}</option>`
         )
         .join('');
-        matchList.innerHTML = html;-
+        matchList.innerHTML = html;
     }
 };
 
