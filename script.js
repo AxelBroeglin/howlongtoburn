@@ -30,7 +30,6 @@ const searchForFood = async searchTextFood => {
 };
 
 
-
 //Show results in HTML
 const outputHtmlFood = nutriments => {
     let html = [];
@@ -40,10 +39,15 @@ const outputHtmlFood = nutriments => {
         matchListFood.addEventListener('click', () =>{
             let kcal = food.value.slice(-4);
             foodCalories.innerHTML = `100 grams of ${food.value.slice(0, -4)} equals ${kcal} kcal`;
+            kcalValue(kcal);
         })
     }
 }
 
+//Kcal from food
+const kcalValue = function(kcal){
+    console.log(kcal)
+}
 
 /*******************************************/
 /************ACTIVITIES CODE****************/
@@ -100,7 +104,7 @@ const burntCalCalc = kcalForKgs => {
 const calcResults = function(kcal,burntCal){
     let timeToBurn = (kcal*burntCal) * 60;
     console.log(timeToBurn)
-    displayResults(timeToBurn)
+    displayResults(kcal)
 }
 
 const displayResults = function (timeToBurn){
