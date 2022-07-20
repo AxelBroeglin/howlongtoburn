@@ -75,21 +75,28 @@ const outputHtml = matches => {
     if(matches.length > 0){
         weight = weight.value
         console.log(weight)
-        const html = matches.map(match => `<option value="${match.Activity}">${match.Activity}</option>`
+        const html = matches.map(match => `<option value="${match.Activity}">${match.kgs60}</option>`
         )
         .join('');
-        matchList.innerHTML = html;
-
-
+        matchList.innerHTML = html;-
     }
 };
 
-matchList.addEventListener('click', () =>{
-    console.log(matchList.value)
-    let burntCal = '';
-    //foodCalories.innerHTML = `100 grams of ${food.value.slice(0, -4)} equals ${kcal} kcal`;
-    //kcalValue(kcal);
-})
+const testCal = function(kcalForKgs, activityChoice){
+    console.log(kcalForKgs)
+}
+
+weight.addEventListener('click', () =>{
+        console.log(matchList.value)
+        let activityChoice = matchList.value;
+        //foodCalories.innerHTML = `100 grams of ${food.value.slice(0, -4)} equals ${kcal} kcal`;
+        //kcalValue(kcal);
+        console.log(activityChoice)
+        //Send this 
+        return activityChoice;
+    })
+
+
 
 
 const burntCalCalc = kcalForKgs => {
@@ -97,15 +104,15 @@ const burntCalCalc = kcalForKgs => {
 
     //function gets the filtered results of search for activity
     //console.log(kcalForKgs)
-    
+
     //function gets the value of the weight
     //console.log(weight.value)
     //need to filter kcalForKgs, look for the weight.value == selected activity
-    let actiVal = activities.value; 
-    kcalForKgs.filter(cal => {
-        console.log(kcalForKgs.match(actiVal.kgs60));
-    })
-    console.log(kcalForKgs);
+    // let actiVal = activities.value; 
+    // kcalForKgs.filter(cal => {
+    //     console.log(kcalForKgs.match(actiVal.kgs60));
+    // })
+    // console.log(kcalForKgs);
 }
 
 /*******************************************/
@@ -130,7 +137,7 @@ const displayResults = function (timeToBurn){
 
 
 // const calcResults = function (kcal, burntCal){
-//     let timeToBurn = (kcal*burntCal) * 60;
+//     let timeToBurn = (kcal/burntCal) * 60;
 //     return timeToBurn;
 // }
 
@@ -154,7 +161,7 @@ searchFood.addEventListener('input', (e) =>{
 /******ACTIVITIES EVENT LISTENERS******/
 //See how to make option disappear when clicked
 search.addEventListener('input', () => searchActivities(search.value));
-matchList.addEventListener('input', () => burntCalCalc(activities.value))
+matchList.addEventListener('input', () => burntCalCalc(activities.value));
 weight.addEventListener('input', () => burntCalCalc(weight.value));
 
 /*******RESULTS EVENT LISTENERS******/
