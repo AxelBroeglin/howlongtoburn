@@ -1,3 +1,7 @@
+body {
+  background-color: #000066;
+}
+
 /**
  * Clear inner floats
  */
@@ -5,4 +9,8 @@
   clear: both;
   content: "";
   display: table;
+}
+
+body {
+  background-color: #000066;
 }/*# sourceMappingURL=main.css.map */
