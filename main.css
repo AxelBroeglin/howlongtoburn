@@ -8,5 +8,14 @@ body {
   background-color: #000066;
   color: rgb(231, 231, 231);
   font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: space-around;
 }
 
+main{
+  width:auto;
+}
+
+h1{
+  text-align: center;
+}
