@@ -89,6 +89,8 @@ const searchActivities = async searchText => {
     //Get matches to current text input
     let matches = activities.filter(sport => {
         const regex = new RegExp(`^${searchText}`, 'gi');
+        console.log(sport)
+        sport = Array.from(sport);
         return sport.match(regex);
     });
     if (searchText.length === 0){
