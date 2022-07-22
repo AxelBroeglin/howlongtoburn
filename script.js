@@ -90,7 +90,8 @@ const searchActivities = async searchText => {
     let matches = activities.filter(sport => {
         const regex = new RegExp(`^${searchText}`, 'gi');
         console.log(sport)
-        sport = Array.from(sport);
+
+        // This returns that not a function. The match is an object, not a function. Need to work on it.
         return sport.match(regex);
     });
     if (searchText.length === 0){
