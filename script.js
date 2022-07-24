@@ -73,7 +73,7 @@ const kcalValue = function(kcal){
 const searchActivities = async searchText => {
     const res = await fetch('./activities.json');
     const activities = await res.json();
-    console.log(activities)
+    console.log(activities[0])
     //Get matches to current text input
     let matches = activities.filter(sport => {
         const regex = new RegExp(`^${searchText}`, 'gi');
