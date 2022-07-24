@@ -14,18 +14,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /***************FOOD VARIABLES*******************/
 const searchFood = document.getElementById('search-food');
 const matchListFood = document.getElementById('food');
@@ -89,7 +77,7 @@ const searchActivities = async searchText => {
     //Get matches to current text input
     let matches = activities.filter(sport => {
         const regex = new RegExp(`^${searchText}`, 'gi');
-        console.log(sport)
+        console.log(sport.match(regex))
 
         // This returns that not a function. The match is an object, not a function. Need to work on it.
         return sport.match(regex);
