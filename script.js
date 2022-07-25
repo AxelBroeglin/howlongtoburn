@@ -73,14 +73,11 @@ const kcalValue = function(kcal){
 const searchActivities = async searchText => {
     const res = await fetch('./activities.json');
     const activities = await res.json();
-    console.log(activities[0])
     //Get matches to current text input
     let matches = activities.filter(sport => {
         const regex = new RegExp(`^${searchText}`, 'gi');
-        console.log(sport.match(regex))
-
-        // This returns that not a function. The match is an object, not a function. Need to work on it.
-        return sport.match(regex);
+        console.log(typeof sport.Activity.match(regex))
+        return sport.Activity.match(regex);
     });
     if (searchText.length === 0){
             matches = [];
