@@ -110,7 +110,7 @@ const testCal = function(kcalForKgs, activityChoice){
     console.log(kcalForKgs)
 }
 
-weight.addEventListener('click', () =>{
+weight.addEventListener('change', () =>{
         console.log(matchList.value)
         let activityChoice = matchList.value;
         //foodCalories.innerHTML = `100 grams of ${food.value.slice(0, -4)} equals ${kcal} kcal`;
