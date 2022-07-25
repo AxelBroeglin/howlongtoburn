@@ -85,7 +85,14 @@ const searchActivities = async searchText => {
     let kcalForKgs = matches;
     outputHtml(matches);
     burntCalCalc(kcalForKgs);
+    testtest(activities)
 };
+let matchListValue = matchList.value;
+
+function testtest(activities, matchListValue){
+    console.log(activities)
+    console.log(matchListValue)
+}
 
 //Show results in HTML
 const outputHtml = matches => {
