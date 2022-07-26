@@ -151,10 +151,13 @@ form.addEventListener('submit', (e) =>{
 //This retrieves the kgs60 for the selected option.
 matchList.addEventListener('change', () => console.log(matchList.options[matchList.selectedIndex].dataset.kgs60));
 /**
- * ? has property ?
+ * * Now need to link this w/ weight selection
  */
 
+
+
 //It takes ___ minutes of ____ to burn 100 grs of ______.  
+
 /**
  * TODO Créer phrase résultat, avec classe underline span, remplacée par texte quand rempli.
  * TODO Récupérer le dataset de l'option choisie dans la liste d'activité en fonction du poids choisi. Choisir activités, choisir poids -> prends dataset correspondant.
