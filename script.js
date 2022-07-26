@@ -147,3 +147,14 @@ form.addEventListener('submit', (e) =>{
     console.log(burntCal);
     calcResults(food.value.slice(-4), burntCal)
 })
+
+matchList.addEventListener('click', () => console.log(matchList.dataset));
+/**
+ * ? has property ?
+ */
+
+//It takes ___ minutes of ____ to burn 100 grs of ______.  
+/**
+ * TODO Créer phrase résultat, avec classe underline span, remplacée par texte quand rempli.
+ * TODO Récupérer le dataset de l'option choisie dans la liste d'activité en fonction du poids choisi. Choisir activités, choisir poids -> prends dataset correspondant.
+ */
