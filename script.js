@@ -148,7 +148,8 @@ form.addEventListener('submit', (e) =>{
     calcResults(food.value.slice(-4), burntCal)
 })
 
-matchList.addEventListener('click', () => console.log(matchList.dataset));
+//This retrieves the kgs60 for the selected option.
+matchList.addEventListener('change', () => console.log(matchList.options[matchList.selectedIndex].dataset.kgs60));
 /**
  * ? has property ?
  */
