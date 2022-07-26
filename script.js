@@ -158,7 +158,10 @@ matchList.addEventListener('change', () => console.log(matchList.options[matchLi
 
 //It takes ___ minutes of ____ to burn 100 grs of ______.  
 
+
+
 /**
  * TODO Créer phrase résultat, avec classe underline span, remplacée par texte quand rempli.
  * TODO Récupérer le dataset de l'option choisie dans la liste d'activité en fonction du poids choisi. Choisir activités, choisir poids -> prends dataset correspondant.
+ * TODO La phrase se remplit au fur et a mesure des choix, le calculs ne se fait que si les 3 choix sont faits ((if 1, 2, 3) =>) ou au changement d'un choix.
  */
