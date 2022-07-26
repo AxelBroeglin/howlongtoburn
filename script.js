@@ -27,6 +27,7 @@ let burntCal = weight.value;
 const results = document.getElementById('results');
 
 
+
 /*******************************************/
 /***************FOOD CODE*******************/
 /*****************************************/
@@ -65,11 +66,17 @@ const kcalValue = function(kcal){
     //console.log(kcal)
 }
 
+/**********FOOD EVENT LISTENERS*********/
+searchFood.addEventListener('input', (e) =>{
+    searchForFood(searchFood.value); 
+    }
+);
+
+
 /*******************************************/
 /************ACTIVITIES CODE****************/
 /*****************************************/
 
-//Search JSON and filter it
 const searchActivities = async searchText => {
     const res = await fetch('./activities.json');
     const activities = await res.json();
@@ -83,22 +90,12 @@ const searchActivities = async searchText => {
     if (searchText.length === 0){
             matches = [];
         }
-    let kcalForKgs = matches;
+    // let kcalForKgs = matches;
     outputHtml(matches);
-    burntCalCalc(kcalForKgs);
-    testtest(activities)
+    // burntCalCalc(kcalForKgs);
+    // testtest(activities)
 };
-let matchListValue = matchList.value;
 
-function testtest(activities, matchListValue){
-    console.log(activities['kgs60'])
-    console.log(matchListValue)
-}
-
-/**
- *! ICI PRENDS BIEN .KGS !!
- *TODO Prendre valeur event list du poids pour envoyer ici
- */
 const outputHtml = matches => {
     if(matches.length > 0){
         weight = weight.value
@@ -109,70 +106,3 @@ const outputHtml = matches => {
         matchList.innerHTML = html;
     }
 };
-
-const testCal = function(kcalForKgs, activityChoice){
-    console.log(kcalForKgs)
-}
-
-const burntCalCalc = function(activitiesValue) {
-    console.log(activitiesValue)
-}
-
-/*******************************************/
-/*************RESULTS CODE*****************/
-/*****************************************/
-
-const calcResults = function(kcal,burntCal){
-    let timeToBurn = (kcal*burntCal) * 60;
-    console.log(timeToBurn)
-    displayResults(kcal)
-}
-
-const displayResults = function (timeToBurn){
-    if(matchListFood.value=='' || matchList.value==''){
-        results.innerHTML= 'Please fill in the form'
-        console.log('test2') //ok
-    }else{
-        console.log(timeToBurn)
-        results.innerhtml = `It would take ${timeToBurn} minutes to burn 100 grams of `
-    }
-}
-
-
-/*******************************************/
-/*************EVENT LISTENERS**************/
-/*****************************************/
-
-/**********FOOD EVENT LISTENERS*********/
-searchFood.addEventListener('input', (e) =>{
-    searchForFood(searchFood.value); 
-    }
-)
-
-/******ACTIVITIES EVENT LISTENERS******/
-//See how to make option disappear when clicked
-search.addEventListener('input', () => searchActivities(search.value));
-matchList.addEventListener('input', () => burntCalCalc(activities.value));
-weight.addEventListener('input', () => {
-    let activitiesValue = weight.value
-    console.log(activitiesValue)
-});
-
-weight.addEventListener('change', () =>{
-    console.log(matchList.value)
-    let activityChoice = matchList.value;
-    console.log(activityChoice)
-    //Send this 
-    return activityChoice;
-})
-
-/*******RESULTS EVENT LISTENERS******/
-//Eventlistener for button
-
-console.log(burntCal)
-form.addEventListener('submit', (e) =>{
-    e.preventDefault();
-    console.log(burntCal);
-    calcResults(food.value.slice(-4), burntCal)
-})
-
