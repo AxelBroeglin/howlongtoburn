@@ -110,10 +110,40 @@ const weightData = matches => {
     console.log(matchList)
 }
 
-//choisir activitié donne valeur calories à dataset calories des poids. Valeurs actualisées à chaque changement d'activité
-
 search.addEventListener('input', () => {
     searchActivities(search.value);
-    //envoi 
-    weightData(search.value);
 });
+
+
+
+
+/*******************************************/
+/*************RESULTS CODE*****************/
+/*****************************************/
+
+const calcResults = function(kcal,burntCal){
+    let timeToBurn = (kcal*burntCal) * 60;
+    console.log(timeToBurn)
+    displayResults(kcal)
+}
+
+const displayResults = function (timeToBurn){
+    if(matchListFood.value=='' || matchList.value==''){
+        results.innerHTML= 'Please fill in the form'
+        console.log('test2') //ok
+    }else{
+        console.log(timeToBurn)
+        results.innerhtml = `It would take ${timeToBurn} minutes to burn 100 grams of `
+    }
+}
+
+
+/*******RESULTS EVENT LISTENERS******/
+//Eventlistener for button
+
+console.log(burntCal)
+form.addEventListener('submit', (e) =>{
+    e.preventDefault();
+    console.log(burntCal);
+    calcResults(food.value.slice(-4), burntCal)
+})
