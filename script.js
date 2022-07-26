@@ -76,9 +76,10 @@ const searchActivities = async searchText => {
     //Get matches to current text input
     let matches = activities.filter(sport => {
         const regex = new RegExp(`^${searchText}`, 'gi');
-        console.log(typeof sport.Activity.match(regex))
+        //console.log(sport.Activity.match(regex))
         return sport.Activity.match(regex);
     });
+    console.log(matches)
     if (searchText.length === 0){
             matches = [];
         }
@@ -90,11 +91,14 @@ const searchActivities = async searchText => {
 let matchListValue = matchList.value;
 
 function testtest(activities, matchListValue){
-    console.log(activities)
+    console.log(activities['kgs60'])
     console.log(matchListValue)
 }
 
-//Show results in HTML
+/**
+ *! ICI PRENDS BIEN .KGS !!
+ *TODO Prendre valeur event list du poids pour envoyer ici
+ */
 const outputHtml = matches => {
     if(matches.length > 0){
         weight = weight.value
@@ -110,38 +114,9 @@ const testCal = function(kcalForKgs, activityChoice){
     console.log(kcalForKgs)
 }
 
-weight.addEventListener('change', () =>{
-        console.log(matchList.value)
-        let activityChoice = matchList.value;
-        //foodCalories.innerHTML = `100 grams of ${food.value.slice(0, -4)} equals ${kcal} kcal`;
-        //kcalValue(kcal);
-        console.log(activityChoice)
-        //Send this 
-        return activityChoice;
-    })
-
-
-
-
 const burntCalCalc = function(activitiesValue) {
     console.log(activitiesValue)
 }
-
-//const burntCalCalc = kcalForKgs => {
-    //Need to use if x is set => do this, otherwise returns several undefined or not a function (because burntCalCalc does not have the input yet)
-
-    //function gets the filtered results of search for activity
-    //console.log(kcalForKgs)
-
-    //function gets the value of the weight
-    //console.log(weight.value)
-    //need to filter kcalForKgs, look for the weight.value == selected activity
-    // let actiVal = activities.value; 
-    // kcalForKgs.filter(cal => {
-    //     console.log(kcalForKgs.match(actiVal.kgs60));
-    // })
-    // console.log(kcalForKgs);
-//}
 
 /*******************************************/
 /*************RESULTS CODE*****************/
@@ -164,18 +139,6 @@ const displayResults = function (timeToBurn){
 }
 
 
-// const calcResults = function (kcal, burntCal){
-//     let timeToBurn = (kcal/burntCal) * 60;
-//     return timeToBurn;
-// }
-
-// const displayResults(timeToBurn){
-//     const resultOfCalc = calcResults()
-// }
-
-// displayResults(*kcal, *burntCal)
-
-
 /*******************************************/
 /*************EVENT LISTENERS**************/
 /*****************************************/
@@ -194,6 +157,14 @@ weight.addEventListener('input', () => {
     let activitiesValue = weight.value
     console.log(activitiesValue)
 });
+
+weight.addEventListener('change', () =>{
+    console.log(matchList.value)
+    let activityChoice = matchList.value;
+    console.log(activityChoice)
+    //Send this 
+    return activityChoice;
+})
 
 /*******RESULTS EVENT LISTENERS******/
 //Eventlistener for button
