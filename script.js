@@ -92,17 +92,28 @@ const searchActivities = async searchText => {
         }
     // let kcalForKgs = matches;
     outputHtml(matches);
+    outputHtml(matches);
     // burntCalCalc(kcalForKgs);
     // testtest(activities)
 };
 
 const outputHtml = matches => {
     if(matches.length > 0){
-        weight = weight.value
-        console.log(weight)
         const html = matches.map(match => `<option value="${match.kgs60}">${match.Activity}</option>`
         )
         .join('');
         matchList.innerHTML = html;
     }
 };
+
+const weightData = matches => {
+    console.log(search.value)
+}
+
+//choisir activitié donne valeur calories à dataset calories des poids. Valeurs actualisées à chaque changement d'activité
+
+search.addEventListener('input', () => {
+    searchActivities(search.value);
+    //envoi 
+    weightData(search.value);
+});
