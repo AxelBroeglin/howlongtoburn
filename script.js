@@ -99,7 +99,7 @@ const searchActivities = async searchText => {
 
 const outputHtml = matches => {
     if(matches.length > 0){
-        const html = matches.map(match => `<option value="${match.kgs60}">${match.Activity}</option>`
+        const html = matches.map(match => `<option data-kgs60="${match.kgs60}" data-kgs70="${match.kgs70}" data-kgs80="${match.kgs80}" data-kgs90="${match.kgs90}">${match.Activity}</option>`
         )
         .join('');
         matchList.innerHTML = html;
@@ -107,7 +107,7 @@ const outputHtml = matches => {
 };
 
 const weightData = matches => {
-    console.log(search.value)
+    console.log(matchList)
 }
 
 //choisir activitié donne valeur calories à dataset calories des poids. Valeurs actualisées à chaque changement d'activité
