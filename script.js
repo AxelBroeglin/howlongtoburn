@@ -55,9 +55,10 @@ const outputHtmlFood = nutriments => {
     for (let i = 0; i < 10; i++) {
         html.push(`<option class='options-food'>${nutriments[i].food_name} - ${nutriments[i].nf_calories}</option>`)
         matchListFood.innerHTML = html;        
-        matchListFood.addEventListener('click', () =>{
+        matchListFood.addEventListener('change', () =>{
             let kcal = food.value.slice(-4);
             foodCalories.innerHTML = `Number of calories in 100 grams of ${food.value.slice(0, -6)} :${kcal}`;
+            spanFood.innerHTML = food.value.slice(0, -6);
             kcalValue(kcal);
         })
     }
@@ -151,7 +152,10 @@ form.addEventListener('submit', (e) =>{
 })
 
 //This retrieves the kgs60 for the selected option.
-matchList.addEventListener('change', () => console.log(matchList.options[matchList.selectedIndex].dataset.kgs60));
+matchList.addEventListener('change', () => {
+    console.log(matchList.options[matchList.selectedIndex].dataset.kgs60)
+    spanActivity.innerHTML = matchList.options[matchList.selectedIndex].innerHTML;
+});
 /**
  * * Now need to link this w/ weight selection
  */
