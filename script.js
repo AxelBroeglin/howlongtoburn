@@ -59,6 +59,8 @@ const outputHtmlFood = nutriments => {
             let kcal = food.value.slice(-4);
             foodCalories.innerHTML = `Number of calories in 100 grams of ${food.value.slice(0, -6)} :${kcal}`;
             spanFood.innerHTML = food.value.slice(0, -6);
+            spanFood.classList.remove('span-results-default');
+            spanFood.classList.add('span-results-filled');
             kcalValue(kcal);
         })
     }
