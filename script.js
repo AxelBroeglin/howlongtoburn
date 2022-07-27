@@ -155,6 +155,8 @@ form.addEventListener('submit', (e) =>{
 matchList.addEventListener('change', () => {
     console.log(matchList.options[matchList.selectedIndex].dataset.kgs60)
     spanActivity.innerHTML = matchList.options[matchList.selectedIndex].innerHTML;
+    spanActivity.classList.remove('span-results-default');
+    spanActivity.classList.add('span-results-filled');
 });
 /**
  * * Now need to link this w/ weight selection
