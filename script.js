@@ -156,8 +156,8 @@ matchList.addEventListener('change', () => console.log(matchList.options[matchLi
 
 
 
-//It takes ___ minutes of ____ to burn 100 grs of ______.  
-
+//100 grams of _____ can be burned by ______ for ___ minutes. 
+//
 
 
 /**
