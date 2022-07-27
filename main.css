@@ -26,3 +26,7 @@ h2{
   font-weight: normal;
   margin:0.7em 0 0.3em 0;
 }
+
+.span-results-default{
+  text-decoration: underline;
+}
