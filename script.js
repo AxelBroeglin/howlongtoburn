@@ -25,7 +25,9 @@ let weight = document.getElementById('weight');
 /***************RESULT VARIABLE*************/
 let burntCal = weight.value;
 const results = document.getElementById('results');
-
+const spanFood = document.getElementById('span-food');
+const spanActivity = document.getElementById('span-activity');
+const spanMinutes = document.getElementById('span-minutes');
 
 
 /*******************************************/
