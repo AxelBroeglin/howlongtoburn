@@ -53,7 +53,7 @@ const searchForFood = async searchTextFood => {
 const outputHtmlFood = nutriments => {
     let html = [];
     for (let i = 0; i < 10; i++) {
-        html.push(`<option class='options-food'>${nutriments[i].food_name} - ${nutriments[i].nf_calories}</option>`)
+        html.push(`<option class='options-food fields'>${nutriments[i].food_name} - ${nutriments[i].nf_calories}</option>`)
         matchListFood.innerHTML = html;        
         matchListFood.addEventListener('change', () =>{
             let kcal = food.value.slice(-4);
@@ -104,7 +104,7 @@ const searchActivities = async searchText => {
 
 const outputHtml = matches => {
     if(matches.length > 0){
-        const html = matches.map(match => `<option data-kgs60="${match.kgs60}" data-kgs70="${match.kgs70}" data-kgs80="${match.kgs80}" data-kgs90="${match.kgs90}">${match.Activity}</option>`
+        const html = matches.map(match => `<option class="fields" data-kgs60="${match.kgs60}" data-kgs70="${match.kgs70}" data-kgs80="${match.kgs80}" data-kgs90="${match.kgs90}">${match.Activity}</option>`
         )
         .join('');
         matchList.innerHTML = html;
