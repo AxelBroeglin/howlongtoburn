@@ -5,8 +5,8 @@
 }
 
 body {
-  background-color: #000066;
-  color: rgb(231, 231, 231);
+  background-color: hsl(27, 66%, 92%);
+  color: black;
   font-family: 'Poppins', sans-serif;
   display: flex;
   justify-content: space-around;
@@ -25,6 +25,15 @@ h1{
 h2{
   font-weight: normal;
   margin:0.7em 0 0.3em 0;
+}
+
+#form-food{
+  display: flex;
+  flex-direction: column;
+}
+
+#form-food > * {
+  margin-bottom: 2vh;
 }
 
 .span-results-default{
