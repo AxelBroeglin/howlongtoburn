@@ -167,9 +167,14 @@ matchList.addEventListener('change', () => {
  })
 
 const calForKgs = function (selectedKgs) {
-    console.log(matchList.options[matchList.selectedIndex].dataset[`${selectedKgs}`]);
+    let kcal = food.value.slice(-4);
+    selectedKgs = matchList.options[matchList.selectedIndex].dataset[`${selectedKgs}`];
+    let timeToBurn = (kcal/selectedKgs) * 60;
+    console.log(timeToBurn);
+    spanMinutes.innerHTML = Math.trunc(timeToBurn);
+    spanMinutes.classList.remove('span-results-default');
+    spanMinutes.classList.add('span-results-filled');
 }
-
 
 /**
  * TODO Récupérer le dataset de l'option choisie dans la liste d'activité en fonction du poids choisi. Choisir activités, choisir poids -> prends dataset correspondant.
