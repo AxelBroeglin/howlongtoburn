@@ -166,15 +166,12 @@ matchList.addEventListener('change', () => {
 
  weight.addEventListener('change', () => {
         let selectedKgs = weight.options[weight.selectedIndex].value;
-        
-        //This calls value of selected option :
-        console.log(matchList.options[matchList.selectedIndex].dataset.selectedKgs)
-        console.log(selectedKgs)
-        
+        calForKgs(selectedKgs);
  })
 
-//100 grams of _____ can be burned by ______ for ___ minutes. 
-//
+const calForKgs = function (selectedKgs) {
+    console.log(matchList.options[matchList.selectedIndex].dataset[`${selectedKgs}`])
+}
 
 
 /**
