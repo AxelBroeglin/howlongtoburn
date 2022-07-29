@@ -1,19 +1,3 @@
-/***** PSEUDO CODE *****/
-// - Type search
-// - Choose food in list
-// - Display result
-
-// - Type activity search
-// - Choose activity in list
-// - Choose weight
-// - Displays result (fetch in JSON -> activity.weight)
-
-// - Check if food, activity and weight are != empty
-// - Calc (calories/burntCal) * 60
-// - Displays result
-
-
-
 /***************FOOD VARIABLES*******************/
 const searchFood = document.getElementById('search-food');
 const matchListFood = document.getElementById('food');
@@ -59,14 +43,8 @@ const outputHtmlFood = nutriments => {
             spanFood.innerHTML = `${food.value.slice(0, -6)} (${kcal} kcal)`;
             spanFood.classList.remove('span-results-default');
             spanFood.classList.add('span-results-filled');
-            kcalValue(kcal);
         })
     }
-}
-
-//Kcal from food, can be taken from a span containing the results
-const kcalValue = function(kcal){
-    //console.log(kcal)
 }
 
 /**********FOOD EVENT LISTENERS*********/
@@ -86,18 +64,12 @@ const searchActivities = async searchText => {
     //Get matches to current text input
     let matches = activities.filter(sport => {
         const regex = new RegExp(`^${searchText}`, 'gi');
-        //console.log(sport.Activity.match(regex))
         return sport.Activity.match(regex);
     });
-    console.log(matches)
     if (searchText.length === 0){
             matches = [];
         }
-    // let kcalForKgs = matches;
     outputHtml(matches);
-    outputHtml(matches);
-    // burntCalCalc(kcalForKgs);
-    // testtest(activities)
 };
 
 const outputHtml = matches => {
@@ -109,14 +81,9 @@ const outputHtml = matches => {
     }
 };
 
-const weightData = matches => {
-    console.log(matchList)
-}
-
 search.addEventListener('input', () => {
     searchActivities(search.value);
 });
-
 
 
 
@@ -124,42 +91,12 @@ search.addEventListener('input', () => {
 /*************RESULTS CODE*****************/
 /*****************************************/
 
-const calcResults = function(kcal,burntCal){
-    let timeToBurn = (kcal*burntCal) * 60;
-    console.log(timeToBurn)
-    displayResults(kcal)
-}
-
-const displayResults = function (timeToBurn){
-    if(matchListFood.value=='' || matchList.value==''){
-        results.innerHTML= 'Please fill in the form'
-        console.log('test2') //ok
-    }else{
-        console.log(timeToBurn)
-        results.innerhtml = `It would take ${timeToBurn} minutes to burn 100 grams of `
-    }
-}
-
-
 /*******RESULTS EVENT LISTENERS******/
-//Eventlistener for button
-
-//A supprimer
-// console.log(burntCal)
-// form.addEventListener('submit', (e) =>{
-//     e.preventDefault();
-//     console.log(burntCal);
-//     calcResults(food.value.slice(-4), burntCal)
-// })
-
 matchList.addEventListener('change', () => {
     spanActivity.innerHTML = matchList.options[matchList.selectedIndex].innerHTML;
     spanActivity.classList.remove('span-results-default');
     spanActivity.classList.add('span-results-filled');
 });
-/**
- * * Now need to link this w/ weight selection
- */
 
  weight.addEventListener('change', () => {
         let selectedKgs = weight.options[weight.selectedIndex].value;
@@ -170,13 +107,7 @@ const calForKgs = function (selectedKgs) {
     let kcal = food.value.slice(-4);
     selectedKgs = matchList.options[matchList.selectedIndex].dataset[`${selectedKgs}`];
     let timeToBurn = (kcal/selectedKgs) * 60;
-    console.log(timeToBurn);
     spanMinutes.innerHTML = Math.trunc(timeToBurn);
     spanMinutes.classList.remove('span-results-default');
     spanMinutes.classList.add('span-results-filled');
 }
-
-/**
- * TODO Récupérer le dataset de l'option choisie dans la liste d'activité en fonction du poids choisi. Choisir activités, choisir poids -> prends dataset correspondant.
- * TODO La phrase se remplit au fur et a mesure des choix, le calculs ne se fait que si les 3 choix sont faits ((if 1, 2, 3) =>) ou au changement d'un choix.
- */
