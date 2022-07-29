@@ -166,7 +166,13 @@ matchList.addEventListener('change', () => {
  * * Now need to link this w/ weight selection
  */
 
-
+ weight.addEventListener('change', () => {
+        selectedKgs = weight.options[weight.selectedIndex].innerHTML;
+        
+        //This calls value of selected option :
+        console.log(selectedKgs)
+        
+ })
 
 //100 grams of _____ can be burned by ______ for ___ minutes. 
 //
