@@ -156,8 +156,6 @@ form.addEventListener('submit', (e) =>{
 //This retrieves the kgs60 for the selected option.
 matchList.addEventListener('change', () => {
     console.log(matchList.options[matchList.selectedIndex].dataset.kgs60);
-    //This calls value of selected option :
-    console.log(weight.options[weight.selectedIndex].innerHTML)
     spanActivity.innerHTML = matchList.options[matchList.selectedIndex].innerHTML;
     spanActivity.classList.remove('span-results-default');
     spanActivity.classList.add('span-results-filled');
@@ -167,9 +165,10 @@ matchList.addEventListener('change', () => {
  */
 
  weight.addEventListener('change', () => {
-        selectedKgs = weight.options[weight.selectedIndex].innerHTML;
+        let selectedKgs = weight.options[weight.selectedIndex].value;
         
         //This calls value of selected option :
+        console.log(matchList.options[matchList.selectedIndex].dataset.selectedKgs)
         console.log(selectedKgs)
         
  })
