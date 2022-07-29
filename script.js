@@ -17,7 +17,6 @@
 /***************FOOD VARIABLES*******************/
 const searchFood = document.getElementById('search-food');
 const matchListFood = document.getElementById('food');
-let foodCalories = document.getElementById('food-calories');
 /***************ACTIVITIES VARIABLES*************/
 const search = document.getElementById('search');
 const matchList = document.getElementById('activities');
@@ -56,9 +55,8 @@ const outputHtmlFood = nutriments => {
         html.push(`<option class='options-food fields'>${nutriments[i].food_name} - ${nutriments[i].nf_calories}</option>`)
         matchListFood.innerHTML = html;        
         matchListFood.addEventListener('change', () =>{
-            let kcal = food.value.slice(-4);
-            foodCalories.innerHTML = `Number of calories in 100 grams of ${food.value.slice(0, -6)} :${kcal}`;
-            spanFood.innerHTML = food.value.slice(0, -6);
+            let kcal = food.value.slice(-3);
+            spanFood.innerHTML = `${food.value.slice(0, -6)} (${kcal} kcal)`;
             spanFood.classList.remove('span-results-default');
             spanFood.classList.add('span-results-filled');
             kcalValue(kcal);
@@ -146,16 +144,15 @@ const displayResults = function (timeToBurn){
 /*******RESULTS EVENT LISTENERS******/
 //Eventlistener for button
 
-console.log(burntCal)
-form.addEventListener('submit', (e) =>{
-    e.preventDefault();
-    console.log(burntCal);
-    calcResults(food.value.slice(-4), burntCal)
-})
+//A supprimer
+// console.log(burntCal)
+// form.addEventListener('submit', (e) =>{
+//     e.preventDefault();
+//     console.log(burntCal);
+//     calcResults(food.value.slice(-4), burntCal)
+// })
 
-//This retrieves the kgs60 for the selected option.
 matchList.addEventListener('change', () => {
-    console.log(matchList.options[matchList.selectedIndex].dataset.kgs60);
     spanActivity.innerHTML = matchList.options[matchList.selectedIndex].innerHTML;
     spanActivity.classList.remove('span-results-default');
     spanActivity.classList.add('span-results-filled');
@@ -170,7 +167,7 @@ matchList.addEventListener('change', () => {
  })
 
 const calForKgs = function (selectedKgs) {
-    console.log(matchList.options[matchList.selectedIndex].dataset[`${selectedKgs}`])
+    console.log(matchList.options[matchList.selectedIndex].dataset[`${selectedKgs}`]);
 }
 
 
