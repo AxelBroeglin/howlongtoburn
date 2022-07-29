@@ -155,7 +155,9 @@ form.addEventListener('submit', (e) =>{
 
 //This retrieves the kgs60 for the selected option.
 matchList.addEventListener('change', () => {
-    console.log(matchList.options[matchList.selectedIndex].dataset.kgs60)
+    console.log(matchList.options[matchList.selectedIndex].dataset.kgs60);
+    //This calls value of selected option :
+    console.log(weight.options[weight.selectedIndex].innerHTML)
     spanActivity.innerHTML = matchList.options[matchList.selectedIndex].innerHTML;
     spanActivity.classList.remove('span-results-default');
     spanActivity.classList.add('span-results-filled');
@@ -171,7 +173,6 @@ matchList.addEventListener('change', () => {
 
 
 /**
- * TODO Créer phrase résultat, avec classe underline span, remplacée par texte quand rempli.
  * TODO Récupérer le dataset de l'option choisie dans la liste d'activité en fonction du poids choisi. Choisir activités, choisir poids -> prends dataset correspondant.
  * TODO La phrase se remplit au fur et a mesure des choix, le calculs ne se fait que si les 3 choix sont faits ((if 1, 2, 3) =>) ou au changement d'un choix.
  */
