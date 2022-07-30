@@ -96,7 +96,6 @@ matchList.addEventListener('change', () => {
     spanActivity.innerHTML = matchList.options[matchList.selectedIndex].innerHTML;
     spanActivity.classList.remove('span-results-default');
     spanActivity.classList.add('span-results-filled');
-    calForKgs()
 });
 
  weight.addEventListener('change', () => {
@@ -118,3 +117,8 @@ const calForKgs = function (selectedKgs) {
     }
 }
 
+
+/**
+ * *S'il n'y a qu'un choix dans la liste event listener ne fonctionne pas car il est sur change, pas possible de changer si qu'un seul choix
+ * * Propositions devraient être affichées dans une liste ouverte, pour inciter au choix
+ */
