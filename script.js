@@ -96,6 +96,7 @@ matchList.addEventListener('change', () => {
     spanActivity.innerHTML = matchList.options[matchList.selectedIndex].innerHTML;
     spanActivity.classList.remove('span-results-default');
     spanActivity.classList.add('span-results-filled');
+    calForKgs()
 });
 
  weight.addEventListener('change', () => {
@@ -107,7 +108,13 @@ const calForKgs = function (selectedKgs) {
     let kcal = food.value.slice(-4);
     selectedKgs = matchList.options[matchList.selectedIndex].dataset[`${selectedKgs}`];
     let timeToBurn = (kcal/selectedKgs) * 60;
-    spanMinutes.innerHTML = Math.trunc(timeToBurn);
-    spanMinutes.classList.remove('span-results-default');
-    spanMinutes.classList.add('span-results-filled');
+    if(typeof timeToBurn == 'number'){
+        spanMinutes.innerHTML = Math.trunc(timeToBurn);
+        spanMinutes.classList.remove('span-results-default');
+        spanMinutes.classList.add('span-results-filled');
+    } else {
+        spanMinutes.classList.add('span-results-default');    
+        spanMinutes.classList.remove('span-results-filled');
+    }
 }
+
