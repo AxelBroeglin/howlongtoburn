@@ -121,4 +121,6 @@ const calForKgs = function (selectedKgs) {
 /**
  * *S'il n'y a qu'un choix dans la liste event listener ne fonctionne pas car il est sur change, pas possible de changer si qu'un seul choix
  * * Propositions devraient être affichées dans une liste ouverte, pour inciter au choix
+ * * Afficher liste de choix sous la boite de rechercher, pas dans select-option, comme dans auto complete etats. (Liste passe au dessus du reste, ne le pousse pas)
+ * * Préparer
  */
