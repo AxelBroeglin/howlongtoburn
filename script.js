@@ -126,4 +126,6 @@ const calForKgs = function (selectedKgs) {
  * * Préparer les classes et variables pour le changement, prévoir le css.
  * TODO Pour le changement une fois un premier calcul fait :
  * TODO détecter la classe des span pour savoir si elles contiennent quelque chose, si oui refaire calcul
+ * TODO Cette dectection doit se faire au clic, comme la précédente.
+ * 
  *  */
