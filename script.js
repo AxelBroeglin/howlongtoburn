@@ -1,10 +1,10 @@
 /***************FOOD VARIABLES*******************/
 const searchFood = document.getElementById('search-food');
 const matchListFood = document.getElementById('food');
+const matchListFood2 = document.getElementById('match-list');
 /***************ACTIVITIES VARIABLES*************/
 const search = document.getElementById('search');
 const matchList = document.getElementById('activities');
-const matchList2 = document.getElementById('match-list');
 let weight = document.getElementById('weight');
 /***************RESULT VARIABLE*************/
 let burntCal = weight.value;
@@ -36,7 +36,12 @@ const searchForFood = async searchTextFood => {
 //Show results in HTML
 const outputHtmlFood = nutriments => {
     let html = [];
+    let html2 = [];
     for (let i = 0; i < 10; i++) {
+        html2.push(`<div>${nutriments[i].food_name} - ${nutriments[i].nf_calories}</div>`)
+        console.log(html2)
+        matchListFood2.innerHTML = html2;  
+
         html.push(`<option class='options-food fields'>${nutriments[i].food_name} - ${nutriments[i].nf_calories}</option>`)
         matchListFood.innerHTML = html;        
         matchListFood.addEventListener('change', () =>{
