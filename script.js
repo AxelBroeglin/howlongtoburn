@@ -40,10 +40,11 @@ const outputHtmlFood = nutriments => {
     for (let i = 0; i < 10; i++) {
         html2.push(`<div>${nutriments[i].food_name} - ${nutriments[i].nf_calories}</div>`)
         console.log(html2)
-        matchListFood2.innerHTML = html2;  
+        matchListFood2.innerHTML = html2.join('');  
 
         html.push(`<option class='options-food fields'>${nutriments[i].food_name} - ${nutriments[i].nf_calories}</option>`)
         matchListFood.innerHTML = html;        
+        
         matchListFood.addEventListener('change', () =>{
             let kcal = food.value.slice(-3);
             spanFood.innerHTML = `${food.value.slice(0, -6)} (${kcal} kcal)`;
@@ -52,7 +53,12 @@ const outputHtmlFood = nutriments => {
         })
     }
 }
-
+matchListFood2.addEventListener('click', () =>{
+    let kcal = food.value.slice(-3);
+    spanFood.innerHTML = `${food.value.slice(0, -6)} (${kcal} kcal)`;
+    spanFood.classList.remove('span-results-default');
+    spanFood.classList.add('span-results-filled');
+})
 /**********FOOD EVENT LISTENERS*********/
 searchFood.addEventListener('input', (e) =>{
     searchForFood(searchFood.value); 
