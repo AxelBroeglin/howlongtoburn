@@ -13,7 +13,7 @@ body {
 }
 
 main{
-  width:60vw;
+  width:80vw;
 }
 
 h1{
@@ -37,6 +37,10 @@ h2{
 
 #search-food{
   width:30%;
+}
+
+#food-wrapper{
+  display: flex;
 }
 
 .fields{
