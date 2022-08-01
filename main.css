@@ -22,6 +22,10 @@ h1{
   font-size: 2.5em;
 }
 
+#main-wrapper{
+  display:flex;
+}
+
 h2{
   font-weight: normal;
   margin:0.7em 0 0.3em 0;
@@ -36,12 +40,23 @@ h2{
 }
 
 #search-food{
-  width:30%;
+  width:20%;
+}
+
+#match-list{
+  width:70%;
+  padding-top: 30px;
+}
+
+.search-results{
+  background-color: hsla(27, 66%, 92%, 0.836);
+  margin-bottom: 10px;
+  font-size: 1.1em;
 }
 
 #food-wrapper{
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 .fields{
