@@ -4,6 +4,7 @@ const matchListFood = document.getElementById('food');
 /***************ACTIVITIES VARIABLES*************/
 const search = document.getElementById('search');
 const matchList = document.getElementById('activities');
+const matchList2 = document.getElementById('match-list');
 let weight = document.getElementById('weight');
 /***************RESULT VARIABLE*************/
 let burntCal = weight.value;
