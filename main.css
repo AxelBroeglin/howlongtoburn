@@ -41,6 +41,7 @@ h2{
 
 #food-wrapper{
   display: flex;
+  justify-content: space-between;
 }
 
 .fields{
