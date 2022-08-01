@@ -4,6 +4,7 @@ const matchListFood = document.getElementById('match-list');
 /***************ACTIVITIES VARIABLES*************/
 const search = document.getElementById('search');
 const matchList = document.getElementById('activities');
+const matchList2 = document.getElementById('match-list-activity');
 let weight = document.getElementById('weight');
 /***************RESULT VARIABLE*************/
 let burntCal = weight.value;
@@ -80,6 +81,10 @@ const outputHtml = matches => {
         )
         .join('');
         matchList.innerHTML = html;
+        const html2 = matches.map(match => `<div class="fields" data-kgs60="${match.kgs60}" data-kgs70="${match.kgs70}" data-kgs80="${match.kgs80}" data-kgs90="${match.kgs90}">${match.Activity}</div>`
+        )
+        .join('');
+        matchList2.innerHTML = html;
     }
 };
 
