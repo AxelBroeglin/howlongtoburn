@@ -19,34 +19,36 @@
 
         <main>
             <h1>How long to burn</h1>
+            
+            <div id="main-wrapper">
+                <!----- Food form ----->
+                <form id="form-food">
+                    <h2>Select your food :</h2>
+                    <div id="food-wrapper">
+                        <input type="text" list="food" id="search-food" class="search fields">
+                        <div id="match-list"></div>
+                    </div>
+                </form>
 
-            <!----- Food form ----->
-            <form id="form-food">
-                <h2>Select your food :</h2>
-                <div id="food-wrapper">
-                    <input type="text" list="food" id="search-food" class="search fields">
-                    <div id="match-list"></div>
-                </div>
-            </form>
 
-
-            <!----- Activities form ----->
-            <form id="form">
-                 <h2>Select your activity :</h2>
-                <input type="text" list="activities" id="search" class="search fields">
-                                
-                <!-- This should be replaced by the div matchList for the activities-->
-                <select id="activities" class="fields">
-                    <option id="defaultActivity" class="fields" selected></option>
-                </select>
-                <select id="weight">
-                    <option></option>
-                    <option data-calories=' ' value="kgs60">60kgs</option>
-                    <option data-calories=' ' value="kgs70">70kgs</option>
-                    <option data-calories=' ' value="kgs80">80kgs</option>
-                    <option data-calories=' ' value="kgs90">90kgs</option>
-                </select>
-            </form>
+                <!----- Activities form ----->
+                <form id="form">
+                    <h2>Select your activity :</h2>
+                    <input type="text" list="activities" id="search" class="search fields">
+                                    
+                    <!-- This should be replaced by the div matchList for the activities-->
+                    <select id="activities" class="fields">
+                        <option id="defaultActivity" class="fields" selected></option>
+                    </select>
+                    <select id="weight">
+                        <option></option>
+                        <option data-calories=' ' value="kgs60">60kgs</option>
+                        <option data-calories=' ' value="kgs70">70kgs</option>
+                        <option data-calories=' ' value="kgs80">80kgs</option>
+                        <option data-calories=' ' value="kgs90">90kgs</option>
+                    </select>
+                </form>
+            </div>
 
 
             <!----- Results ----->
