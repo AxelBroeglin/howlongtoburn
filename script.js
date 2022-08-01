@@ -84,7 +84,7 @@ const outputHtml = matches => {
         const html2 = matches.map(match => `<div class="fields" data-kgs60="${match.kgs60}" data-kgs70="${match.kgs70}" data-kgs80="${match.kgs80}" data-kgs90="${match.kgs90}">${match.Activity}</div>`
         )
         .join('');
-        matchList2.innerHTML = html;
+        matchList2.innerHTML = html2;
     }
 };
 
