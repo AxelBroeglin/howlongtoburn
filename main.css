@@ -18,7 +18,7 @@ main{
 
 h1{
   text-align: center;
-  padding: 5vh 0 5vh 0;
+  padding: 2vh 0 2vh 0;
   font-size: 2.5em;
 }
 
@@ -40,12 +40,13 @@ h2{
   flex-direction: column;
   width: 50%;
 }
-#form-food > * {
+food > * {
   margin-bottom: 2vh;
 }
 
-#search-food{
+input{
   width:20%;
+  height:1vh;
 }
 
 #match-list{
@@ -55,7 +56,7 @@ h2{
 
 .search-results{
   background-color: hsla(27, 66%, 92%, 0.836);
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-size: 1.1em;
 }
 
