@@ -75,6 +75,7 @@ const searchActivities = async searchText => {
     outputHtml(matches);
 };
 
+//For loop to limit at 10 results ?
 const outputHtml = matches => {
     if(matches.length > 0){
         const html = matches.map(match => `<option class="fields" data-kgs60="${match.kgs60}" data-kgs70="${match.kgs70}" data-kgs80="${match.kgs80}" data-kgs90="${match.kgs90}">${match.Activity}</option>`
@@ -109,6 +110,7 @@ search.addEventListener('input', () => {
 matchList2.addEventListener('click', () => {
     console.log(event.target.dataset.kgs60)
     spanActivity.innerHTML = event.target.innerHTML;
+    spanActivity.dataset.kgs60 = event.target.dataset.kgs60;
     spanActivity.classList.remove('span-results-default');
     spanActivity.classList.add('span-results-filled');
 });
