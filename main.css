@@ -47,6 +47,9 @@ food > * {
 .search{
   width:50%;
   height:5vh;
+  font-size: 1.1em;
+  color: black;
+  text-align: center;
 }
 
 #match-list{
