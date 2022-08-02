@@ -52,7 +52,7 @@ searchFood.addEventListener('input', (e) =>{
 
 matchListFood.addEventListener('click', () =>{
     let kcal = event.target.innerHTML.slice(-3);
-    spanFood.innerHTML = `${event.target.innerHTML.slice(0, -6)} (${kcal} kcal)`;
+    spanFood.innerHTML = `${event.target.innerHTML.slice(0, -6)} (${kcal}`;
     spanFood.classList.remove('span-results-default');
     spanFood.classList.add('span-results-filled');
 })
@@ -93,12 +93,6 @@ search.addEventListener('input', () => {
     searchActivities(search.value);
 });
 
-// matchListFood.addEventListener('click', () =>{
-//     let kcal = event.target.innerHTML.slice(-3);
-//     spanFood.innerHTML = `${event.target.innerHTML.slice(0, -6)} (${kcal} kcal)`;
-//     spanFood.classList.remove('span-results-default');
-//     spanFood.classList.add('span-results-filled');
-// })
 
 /*******************************************/
 /*************RESULTS CODE*****************/
@@ -110,7 +104,7 @@ search.addEventListener('input', () => {
 matchList2.addEventListener('click', () => {
     console.log(event.target.dataset.kgs60)
     spanActivity.innerHTML = event.target.innerHTML;
-    //Need to find a more elegant way
+    //Need to find a more elegant way, like .dataset[`${selectedKgs}`] ?
     spanActivity.dataset.kgs60 = event.target.dataset.kgs60;
     spanActivity.dataset.kgs70 = event.target.dataset.kgs70;
     spanActivity.dataset.kgs80 = event.target.dataset.kgs80;
@@ -126,8 +120,9 @@ matchList2.addEventListener('click', () => {
 
 
 const calForKgs = function (selectedKgs) {
-    let kcal = food.value.slice(-4);
-    selectedKgs = matchList.options[matchList.selectedIndex].dataset[`${selectedKgs}`];
+    let kcal = spanFood.innerHTML.slice(-3);
+    selectedKgs = spanActivity.dataset[`${selectedKgs}`];
+    console.log(kcal, selectedKgs)
     let timeToBurn = (kcal/selectedKgs) * 60;
     if(typeof timeToBurn == 'number'){
         spanMinutes.innerHTML = Math.trunc(timeToBurn);
