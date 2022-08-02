@@ -122,7 +122,6 @@ matchList2.addEventListener('click', () => {
 const calForKgs = function (selectedKgs) {
     let kcal = spanFood.innerHTML.slice(-3);
     selectedKgs = spanActivity.dataset[`${selectedKgs}`];
-    console.log(kcal, selectedKgs)
     let timeToBurn = (kcal/selectedKgs) * 60;
     if(typeof timeToBurn == 'number'){
         spanMinutes.innerHTML = Math.trunc(timeToBurn);
