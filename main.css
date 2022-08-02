@@ -31,8 +31,10 @@ h2{
   margin:0.7em 0 0.3em 0;
 }
 
-#form{
+form{
   width: 50%;
+  height: 60vh;
+  border: solid 1px black;
 }
 
 #form-food{
@@ -45,6 +47,8 @@ food > * {
 }
 
 .search{
+  position: relative;
+  left: 25%;
   width:50%;
   height:5vh;
   font-size: 1.1em;
@@ -53,7 +57,7 @@ food > * {
 }
 
 #match-list{
-  width:70%;
+  width:90%;
   padding-top: 30px;
 }
 
