@@ -104,6 +104,8 @@ search.addEventListener('input', () => {
 /*****************************************/
 
 /*******RESULTS EVENT LISTENERS******/
+
+//Remplir data- vides par ceux de l'activité cliquée ?
 matchList2.addEventListener('click', () => {
     console.log(event.target.dataset.kgs60)
     spanActivity.innerHTML = event.target.innerHTML;
