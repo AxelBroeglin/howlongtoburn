@@ -104,8 +104,9 @@ search.addEventListener('input', () => {
 /*****************************************/
 
 /*******RESULTS EVENT LISTENERS******/
-matchList.addEventListener('click', () => {
-    spanActivity.innerHTML = event.target.innerHTML  //matchList.options[matchList.selectedIndex].innerHTML;
+matchList2.addEventListener('click', () => {
+    console.log(event.target.dataset.kgs60)
+    spanActivity.innerHTML = event.target.innerHTML;
     spanActivity.classList.remove('span-results-default');
     spanActivity.classList.add('span-results-filled');
 });
