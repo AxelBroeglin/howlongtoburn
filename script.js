@@ -81,7 +81,7 @@ const outputHtml = matches => {
         const html = matches.map(match => `<option class="fields" data-kgs60="${match.kgs60}" data-kgs70="${match.kgs70}" data-kgs80="${match.kgs80}" data-kgs90="${match.kgs90}">${match.Activity}</option>`
         )
         .join('');
-        matchList.innerHTML = html;
+        matchList2.innerHTML = html;
         const html2 = matches.map(match => `<div class="fields" data-kgs60="${match.kgs60}" data-kgs70="${match.kgs70}" data-kgs80="${match.kgs80}" data-kgs90="${match.kgs90}">${match.Activity}</div>`
         )
         .join('');
@@ -110,7 +110,11 @@ search.addEventListener('input', () => {
 matchList2.addEventListener('click', () => {
     console.log(event.target.dataset.kgs60)
     spanActivity.innerHTML = event.target.innerHTML;
+    //Need to find a more elegant way
     spanActivity.dataset.kgs60 = event.target.dataset.kgs60;
+    spanActivity.dataset.kgs70 = event.target.dataset.kgs70;
+    spanActivity.dataset.kgs80 = event.target.dataset.kgs80;
+    spanActivity.dataset.kgs90 = event.target.dataset.kgs90;
     spanActivity.classList.remove('span-results-default');
     spanActivity.classList.add('span-results-filled');
 });
