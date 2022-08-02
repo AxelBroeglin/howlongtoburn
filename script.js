@@ -92,15 +92,20 @@ search.addEventListener('input', () => {
     searchActivities(search.value);
 });
 
-
+// matchListFood.addEventListener('click', () =>{
+//     let kcal = event.target.innerHTML.slice(-3);
+//     spanFood.innerHTML = `${event.target.innerHTML.slice(0, -6)} (${kcal} kcal)`;
+//     spanFood.classList.remove('span-results-default');
+//     spanFood.classList.add('span-results-filled');
+// })
 
 /*******************************************/
 /*************RESULTS CODE*****************/
 /*****************************************/
 
 /*******RESULTS EVENT LISTENERS******/
-matchList.addEventListener('change', () => {
-    spanActivity.innerHTML = matchList.options[matchList.selectedIndex].innerHTML;
+matchList.addEventListener('click', () => {
+    spanActivity.innerHTML = event.target.innerHTML  //matchList.options[matchList.selectedIndex].innerHTML;
     spanActivity.classList.remove('span-results-default');
     spanActivity.classList.add('span-results-filled');
 });
@@ -109,6 +114,7 @@ matchList.addEventListener('change', () => {
         let selectedKgs = weight.options[weight.selectedIndex].value;
         calForKgs(selectedKgs);
  })
+
 
 const calForKgs = function (selectedKgs) {
     let kcal = food.value.slice(-4);
