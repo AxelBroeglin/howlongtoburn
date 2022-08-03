@@ -46,11 +46,18 @@ food > * {
   margin-bottom: 2vh;
 }
 
+#form-activity{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .search{
   position: relative;
   left: 25%;
   width:50%;
   height:5vh;
+  margin-top: 1em;
   font-size: 1.1em;
   color: black;
   text-align: center;
@@ -70,6 +77,17 @@ food > * {
 #food-wrapper{
   display: flex;
   flex-direction: column;
+}
+
+#weight-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#weight{
+  margin-left: 20px;
+  height: 20px;
 }
 
 .fields{
