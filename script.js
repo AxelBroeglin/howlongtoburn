@@ -104,11 +104,9 @@ search.addEventListener('input', () => {
 matchList2.addEventListener('click', () => {
     console.log(event.target.dataset.kgs60)
     spanActivity.innerHTML = event.target.innerHTML;
-    //Need to find a more elegant way, like .dataset[`${selectedKgs}`] ?
-    spanActivity.dataset.kgs60 = event.target.dataset.kgs60;
-    spanActivity.dataset.kgs70 = event.target.dataset.kgs70;
-    spanActivity.dataset.kgs80 = event.target.dataset.kgs80;
-    spanActivity.dataset.kgs90 = event.target.dataset.kgs90;
+    for (const kgs in spanActivity.dataset) {
+        spanActivity.dataset[kgs] = event.target.dataset[kgs];
+      }
     spanActivity.classList.remove('span-results-default');
     spanActivity.classList.add('span-results-filled');
 });
