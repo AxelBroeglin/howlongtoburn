@@ -54,9 +54,9 @@ food > * {
 
 .search{
   position: relative;
-  left: 25%;
-  width:50%;
-  height:5vh;
+  left: 30%;
+  width:40%;
+  height:4vh;
   margin-top: 1em;
   font-size: 1.1em;
   color: black;
