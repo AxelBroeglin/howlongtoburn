@@ -49,7 +49,6 @@ food > * {
 #form-activity{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .search{
@@ -65,6 +64,10 @@ food > * {
 
 #match-list{
   width:90%;
+  padding-top: 30px;
+}
+
+#match-list-activity{
   padding-top: 30px;
 }
 
