@@ -31,17 +31,21 @@
 
 
                 <!----- Activities form ----->
-                <form id="form">
+                <form id="form-activity">
                     <input type="text" list="activities" id="search" class="search" placeholder="Select your activity">
                                     
                     <div id="match-list-activity"></div>
-                    <select id="weight">
-                        <option></option>
-                        <option data-calories=' ' value="kgs60">60kgs</option>
-                        <option data-calories=' ' value="kgs70">70kgs</option>
-                        <option data-calories=' ' value="kgs80">80kgs</option>
-                        <option data-calories=' ' value="kgs90">90kgs</option>
-                    </select>
+
+                    <div id="weight-wrapper">
+                        <p>Select your weight</p>
+                        <select id="weight">
+                            <option></option>
+                            <option data-calories=' ' value="kgs60">60kgs</option>
+                            <option data-calories=' ' value="kgs70">70kgs</option>
+                            <option data-calories=' ' value="kgs80">80kgs</option>
+                            <option data-calories=' ' value="kgs90">90kgs</option>
+                        </select>
+                    </div>
                 </form>
             </div>
 
