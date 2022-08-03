@@ -94,6 +94,12 @@ food > * {
   height:20px;
 }
 
+#results-wrapper{
+  display: flex;
+  justify-content: center;
+  font-size: 1.4em;
+}
+
 .span-results-default{
   text-decoration: underline;
 }
