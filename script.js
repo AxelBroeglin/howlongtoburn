@@ -3,11 +3,9 @@ const searchFood = document.getElementById('search-food');
 const matchListFood = document.getElementById('match-list');
 /***************ACTIVITIES VARIABLES*************/
 const search = document.getElementById('search');
-const matchList = document.getElementById('activities');
-const matchList2 = document.getElementById('match-list-activity');
+const matchList = document.getElementById('match-list-activity');
 let weight = document.getElementById('weight');
 /***************RESULT VARIABLE*************/
-let burntCal = weight.value;
 const results = document.getElementById('results');
 const spanFood = document.getElementById('span-food');
 const spanActivity = document.getElementById('span-activity');
@@ -81,11 +79,11 @@ const outputHtml = matches => {
         const html = matches.map(match => `<option class="fields" data-kgs60="${match.kgs60}" data-kgs70="${match.kgs70}" data-kgs80="${match.kgs80}" data-kgs90="${match.kgs90}">${match.Activity}</option>`
         )
         .join('');
-        matchList2.innerHTML = html;
+        matchList.innerHTML = html;
         const html2 = matches.map(match => `<div class="fields" data-kgs60="${match.kgs60}" data-kgs70="${match.kgs70}" data-kgs80="${match.kgs80}" data-kgs90="${match.kgs90}">${match.Activity}</div>`
         )
         .join('');
-        matchList2.innerHTML = html2;
+        matchList.innerHTML = html2;
     }
 };
 
@@ -101,7 +99,7 @@ search.addEventListener('input', () => {
 /*******RESULTS EVENT LISTENERS******/
 
 //Remplir data- vides par ceux de l'activité cliquée ?
-matchList2.addEventListener('click', () => {
+matchList.addEventListener('click', () => {
     console.log(event.target.dataset.kgs60)
     spanActivity.innerHTML = event.target.innerHTML;
     for (const kgs in spanActivity.dataset) {
