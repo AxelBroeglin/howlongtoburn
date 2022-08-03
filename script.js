@@ -76,13 +76,12 @@ const searchActivities = async searchText => {
 //For loop to limit at 10 results ?
 const outputHtml = matches => {
     if(matches.length > 0){
-        const html = matches.map(match => `<option class="fields" data-kgs60="${match.kgs60}" data-kgs70="${match.kgs70}" data-kgs80="${match.kgs80}" data-kgs90="${match.kgs90}">${match.Activity}</option>`
+        let html2 = [];
+        for (let i = 1; i <= 10; i++){
+        console.log(i)
+        html2 = matches.map(match => `<div class="fields" data-kgs60="${match.kgs60}" data-kgs70="${match.kgs70}" data-kgs80="${match.kgs80}" data-kgs90="${match.kgs90}">${match.Activity}</div>`
         )
-        .join('');
-        matchList.innerHTML = html;
-        const html2 = matches.map(match => `<div class="fields" data-kgs60="${match.kgs60}" data-kgs70="${match.kgs70}" data-kgs80="${match.kgs80}" data-kgs90="${match.kgs90}">${match.Activity}</div>`
-        )
-        .join('');
+        .join('');}
         matchList.innerHTML = html2;
     }
 };
