@@ -37,7 +37,6 @@ const outputHtmlFood = nutriments => {
     let html2 = [];
     for (let i = 0; i < 10; i++) {
         html2.push(`<div class='search-results'>${nutriments[i].food_name} - ${nutriments[i].nf_calories}</div>`)
-        console.log(html2)
         matchListFood.innerHTML = html2.join('');  
     }
 }
@@ -96,7 +95,6 @@ search.addEventListener('input', () => {
 
 //Remplir data- vides par ceux de l'activité cliquée ?
 matchList.addEventListener('click', () => {
-    console.log(event.target.dataset.kgs60)
     spanActivity.innerHTML = event.target.innerHTML;
     for (const kgs in spanActivity.dataset) {
         spanActivity.dataset[kgs] = event.target.dataset[kgs];
@@ -111,18 +109,23 @@ matchList.addEventListener('click', () => {
  })
 
 
-const calForKgs = function (selectedKgs) {
-    let kcal = spanFood.innerHTML.slice(-3);
-    selectedKgs = spanActivity.dataset[`${selectedKgs}`];
-    let timeToBurn = (kcal/selectedKgs) * 60;
-    if(typeof timeToBurn == 'number'){
-        spanMinutes.innerHTML = Math.trunc(timeToBurn);
-        spanMinutes.classList.remove('span-results-default');
-        spanMinutes.classList.add('span-results-filled');
-    } else {
-        spanMinutes.classList.add('span-results-default');    
-        spanMinutes.classList.remove('span-results-filled');
+const calForKgs = function (selectedKgs, ) {
+    if(selectedKgs){
+        let kcal = spanFood.innerHTML.slice(-3);
+        selectedKgs = spanActivity.dataset[`${selectedKgs}`];
+        let timeToBurn = (kcal/selectedKgs) * 60;
+        if(typeof timeToBurn == 'number'){
+            spanMinutes.innerHTML = Math.trunc(timeToBurn);
+            spanMinutes.classList.remove('span-results-default');
+            spanMinutes.classList.add('span-results-filled');
+        } else {
+            spanMinutes.classList.add('span-results-default');    
+            spanMinutes.classList.remove('span-results-filled');
+        }
+    }else{
+        console.log('other')
     }
+
 }
 
 
