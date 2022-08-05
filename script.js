@@ -103,29 +103,35 @@ matchList.addEventListener('click', () => {
     spanActivity.classList.add('span-results-filled');
 });
 
+
+let selectedKgs = weight.options[weight.selectedIndex].value;
+
+
  weight.addEventListener('change', () => {
-        let selectedKgs = weight.options[weight.selectedIndex].value;
-        calForKgs(selectedKgs);
+    calForKgs(selectedKgs);
+ })
+
+ matchList.addEventListener('change', () => {
+    if(spanMinutes.classList.contains('span-results-filled')){
+    calForKgs(selectedKgs);
+    }
  })
 
 
-const calForKgs = function (selectedKgs, ) {
-    if(selectedKgs){
-        let kcal = spanFood.innerHTML.slice(-3);
-        selectedKgs = spanActivity.dataset[`${selectedKgs}`];
-        let timeToBurn = (kcal/selectedKgs) * 60;
-        if(typeof timeToBurn == 'number'){
-            spanMinutes.innerHTML = Math.trunc(timeToBurn);
-            spanMinutes.classList.remove('span-results-default');
-            spanMinutes.classList.add('span-results-filled');
-        } else {
-            spanMinutes.classList.add('span-results-default');    
-            spanMinutes.classList.remove('span-results-filled');
-        }
-    }else{
-        console.log('other')
+const calForKgs = function (selectedKgs) {
+    let kcal = spanFood.innerHTML.slice(-3);
+    console.log(selectedKgs)
+    selectedKgs = spanActivity.dataset[`${selectedKgs}`];
+    console.log(selectedKgs)
+    let timeToBurn = (kcal/selectedKgs) * 60;
+    if(typeof timeToBurn == 'number'){
+        spanMinutes.innerHTML = Math.trunc(timeToBurn);
+        spanMinutes.classList.remove('span-results-default');
+        spanMinutes.classList.add('span-results-filled');
+    } else {
+        spanMinutes.classList.add('span-results-default');    
+        spanMinutes.classList.remove('span-results-filled');
     }
-
 }
 
 
