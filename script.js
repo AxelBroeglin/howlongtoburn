@@ -95,34 +95,44 @@ search.addEventListener('input', () => {
 
 //Remplir data- vides par ceux de l'activité cliquée ?
 matchList.addEventListener('click', () => {
+    if(spanMinutes.classList.contains('span-results-filled')){
+        calForKgs();
+        } else {
     spanActivity.innerHTML = event.target.innerHTML;
     for (const kgs in spanActivity.dataset) {
         spanActivity.dataset[kgs] = event.target.dataset[kgs];
-      }
+        }
     spanActivity.classList.remove('span-results-default');
     spanActivity.classList.add('span-results-filled');
+        }
 });
 
 
-let selectedKgs = weight.options[weight.selectedIndex].value;
 
 
+//Change weight calls calForKgs that calls calcul
  weight.addEventListener('change', () => {
+    let selectedKgs = weight.options[weight.selectedIndex].value;
     calForKgs(selectedKgs);
  })
 
- matchList.addEventListener('change', () => {
-    if(spanMinutes.classList.contains('span-results-filled')){
-    calForKgs(selectedKgs);
-    }
- })
+
+//  matchList.addEventListener('change', () => {
+//     console.log()
+//     if(spanMinutes.classList.contains('span-results-filled')){
+//     calForKgs(selectedKgs);
+//     }
+//  })
 
 
 const calForKgs = function (selectedKgs) {
-    let kcal = spanFood.innerHTML.slice(-3);
-    console.log(selectedKgs)
     selectedKgs = spanActivity.dataset[`${selectedKgs}`];
-    console.log(selectedKgs)
+    calculResults(selectedKgs)
+}
+
+//if change food : call this function
+const calculResults = function (selectedKgs) {
+    let kcal = spanFood.innerHTML.slice(-3);
     let timeToBurn = (kcal/selectedKgs) * 60;
     if(typeof timeToBurn == 'number'){
         spanMinutes.innerHTML = Math.trunc(timeToBurn);
