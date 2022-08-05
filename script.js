@@ -93,7 +93,7 @@ search.addEventListener('input', () => {
 
 /*******RESULTS EVENT LISTENERS******/
 
-//Remplir data- vides par ceux de l'activité cliquée ?
+//if else to check if a calc has already been done, if yes jump to calc, if no, regular calc
 matchList.addEventListener('click', () => {
     if(spanMinutes.classList.contains('span-results-filled')){
         calForKgs();
@@ -117,20 +117,14 @@ matchList.addEventListener('click', () => {
  })
 
 
-//  matchList.addEventListener('change', () => {
-//     console.log()
-//     if(spanMinutes.classList.contains('span-results-filled')){
-//     calForKgs(selectedKgs);
-//     }
-//  })
-
-
 const calForKgs = function (selectedKgs) {
     selectedKgs = spanActivity.dataset[`${selectedKgs}`];
     calculResults(selectedKgs)
 }
 
-//if change food : call this function
+/**
+ * ! if change food, call this function
+ */
 const calculResults = function (selectedKgs) {
     let kcal = spanFood.innerHTML.slice(-3);
     let timeToBurn = (kcal/selectedKgs) * 60;
