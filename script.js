@@ -98,16 +98,12 @@ search.addEventListener('input', () => {
 
 //if else to check if a calc has already been done, if yes jump to calc, if no, regular calc
 matchList.addEventListener('click', () => {
-    if(spanMinutes.classList.contains('span-results-filled')){
-        calForKgs();
-        } else {
     spanActivity.innerHTML = event.target.innerHTML;
     for (const kgs in spanActivity.dataset) {
         spanActivity.dataset[kgs] = event.target.dataset[kgs];
         }
     spanActivity.classList.remove('span-results-default');
     spanActivity.classList.add('span-results-filled');
-        }
 });
 
 matchListFood.addEventListener('click', () => {
