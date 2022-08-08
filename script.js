@@ -98,12 +98,11 @@ search.addEventListener('input', () => {
 
 //if else to check if a calc has already been done, if yes jump to calc, if no, regular calc
 matchList.addEventListener('click', () => {
-console.log(spanActivity.innerHTML);
-if(event.target.innerHTML !== ""){
-    spanActivity.innerHTML = event.target.innerHTML;
-    for (const kgs in spanActivity.dataset) {
-        spanActivity.dataset[kgs] = event.target.dataset[kgs];
-        }
+    if(event.target.innerHTML !== ""){
+        spanActivity.innerHTML = event.target.innerHTML;
+        for (const kgs in spanActivity.dataset) {
+            spanActivity.dataset[kgs] = event.target.dataset[kgs];
+    }
     spanActivity.classList.remove('span-results-default');
     spanActivity.classList.add('span-results-filled');
 }
