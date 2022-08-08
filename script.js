@@ -36,7 +36,7 @@ const searchForFood = async searchTextFood => {
 const outputHtmlFood = nutriments => {
     let html = [];
     for (let i = 0; i < 10; i++) {
-        html.push(`<div class='search-results'>${nutriments[i].food_name} - ${nutriments[i].nf_calories}</div>`)
+        html.push(`<div class='search-results'>${nutriments[i].food_name} - ${Math.trunc(nutriments[i].nf_calories)}</div>`)
         matchListFood.innerHTML = html.join('');  
     }
 }
