@@ -112,6 +112,9 @@ matchList.addEventListener('click', () => {
             spanActivity.classList.remove('span-results-default');
             spanActivity.classList.add('span-results-filled');
         }
+        if(spanFood.classList.contains('span-results-filled')){
+            calForKgs();
+        }
     }
 });
 
