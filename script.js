@@ -127,18 +127,15 @@ const calForKgs = function () {
     calculResults(selectedKgs);
 }
 
-/**
- * ! if change food, call this function
- */
 const calculResults = function (selectedKgs) {
     let kcal = spanFood.innerHTML.slice(-3);
     let timeToBurn = (kcal/selectedKgs) * 60;
-    if(typeof timeToBurn == 'number'){
+    if(!isNaN(timeToBurn)){
         spanMinutes.innerHTML = Math.trunc(timeToBurn);
         spanMinutes.classList.remove('span-results-default');
         spanMinutes.classList.add('span-results-filled');
-    } else {
-        spanMinutes.classList.add('span-results-default');    
+    } else{
+        spanMinutes.classList.add('span-results-default');
         spanMinutes.classList.remove('span-results-filled');
     }
 }
