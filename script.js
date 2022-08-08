@@ -34,10 +34,9 @@ const searchForFood = async searchTextFood => {
 //Show results in HTML
 const outputHtmlFood = nutriments => {
     let html = [];
-    let html2 = [];
     for (let i = 0; i < 10; i++) {
-        html2.push(`<div class='search-results'>${nutriments[i].food_name} - ${nutriments[i].nf_calories}</div>`)
-        matchListFood.innerHTML = html2.join('');  
+        html.push(`<div class='search-results'>${nutriments[i].food_name} - ${nutriments[i].nf_calories}</div>`)
+        matchListFood.innerHTML = html.join('');  
     }
 }
 
@@ -83,10 +82,10 @@ const searchActivities = async searchText => {
 //For loop to limit at 10 results ?
 const outputHtml = matches => {
     if(matches.length > 0){
-        const html2 = matches.map(match => `<div class="search-results" data-kgs60="${match.kgs60}" data-kgs70="${match.kgs70}" data-kgs80="${match.kgs80}" data-kgs90="${match.kgs90}">${match.Activity}</div>`
+        const html = matches.map(match => `<div class="search-results" data-kgs60="${match.kgs60}" data-kgs70="${match.kgs70}" data-kgs80="${match.kgs80}" data-kgs90="${match.kgs90}">${match.Activity}</div>`
         )
         .join('');
-        matchList.innerHTML = html2;
+        matchList.innerHTML = html;
     }
 };
 
