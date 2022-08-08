@@ -49,9 +49,12 @@ searchFood.addEventListener('input', (e) =>{
 
 matchListFood.addEventListener('click', () =>{
     let kcal = event.target.innerHTML.slice(-3);
-    spanFood.innerHTML = `${event.target.innerHTML.slice(0, -6)} (${kcal}`;
-    spanFood.classList.remove('span-results-default');
-    spanFood.classList.add('span-results-filled');
+    if(kcal.length > 0){
+        spanFood.innerHTML = `${event.target.innerHTML.slice(0, -6)} (${kcal}`;
+        spanFood.classList.remove('span-results-default');
+        spanFood.classList.add('span-results-filled');
+    }
+
 })
 
 /*******************************************/
@@ -107,7 +110,14 @@ matchList.addEventListener('click', () => {
         }
 });
 
-
+matchListFood.addEventListener('click', () => {
+    if(spanFood.classList.contains('span-results-filled')){
+        console.log('filled')
+    }
+    else{
+        console.log('empty')
+    }
+})
 
 
 //Change weight calls calForKgs that calls calcul
