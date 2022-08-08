@@ -51,6 +51,7 @@ food > * {
 }
 .visible{
   display: inline;
+  font-weight: bold;
 }
 
 #form-activity{

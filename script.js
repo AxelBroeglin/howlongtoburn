@@ -51,8 +51,6 @@ matchListFood.addEventListener('click', () =>{
     let kcal = event.target.innerHTML.slice(-3);
     if(spanFood.classList.contains('span-results-filled')){
         spanFood.innerHTML = `${event.target.innerHTML.slice(0, -6)} (${kcal}`;
-        spanCal.classList.add('visible');
-        spanCal.classList.remove('invisible');
         calForKgs();
     }
     else{
