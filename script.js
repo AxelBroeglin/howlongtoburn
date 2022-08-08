@@ -1,6 +1,6 @@
 /***************FOOD VARIABLES*******************/
 const searchFood = document.getElementById('search-food');
-const matchListFood = document.getElementById('match-list');
+const matchListFood = document.getElementById('match-list-food');
 /***************ACTIVITIES VARIABLES*************/
 const search = document.getElementById('search');
 const matchList = document.getElementById('match-list-activity');
