@@ -5,6 +5,7 @@ const matchListFood = document.getElementById('match-list-food');
 const search = document.getElementById('search');
 const matchList = document.getElementById('match-list-activity');
 let weight = document.getElementById('weight');
+let weight2 = document.getElementById('weight2');
 /***************RESULT VARIABLE*************/
 const results = document.getElementById('results');
 const spanFood = document.getElementById('span-food');
@@ -40,6 +41,13 @@ const outputHtmlFood = nutriments => {
         matchListFood.innerHTML = html.join('');  
     }
 }
+
+let weightOptions = ["<option></option>"];
+for (let i = 50; i < 121; i++) {
+    weightOptions.push(`<option value='${[i]}'> ${[i]} kgs</option>`);
+    console.log(weightOptions)
+    weight2.innerHTML = weightOptions.join('');  
+    }
 
 /**********FOOD EVENT LISTENERS*********/
 searchFood.addEventListener('input', (e) =>{
