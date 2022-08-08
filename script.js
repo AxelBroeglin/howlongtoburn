@@ -48,13 +48,19 @@ searchFood.addEventListener('input', (e) =>{
 );
 
 matchListFood.addEventListener('click', () =>{
-    let kcal = event.target.innerHTML.slice(-3);
-    if(kcal.length > 0){
-        spanFood.innerHTML = `${event.target.innerHTML.slice(0, -6)} (${kcal}`;
-        spanFood.classList.remove('span-results-default');
-        spanFood.classList.add('span-results-filled');
+    if(spanFood.classList.contains('span-results-filled')){
+        console.log('filled')
+        calForKgs();
     }
-
+    else{
+        let kcal = event.target.innerHTML.slice(-3);
+        if(kcal.length > 0){
+            spanFood.innerHTML = `${event.target.innerHTML.slice(0, -6)} (${kcal}`;
+            spanFood.classList.remove('span-results-default');
+            spanFood.classList.add('span-results-filled');
+        }    
+    }
+    
 })
 
 /*******************************************/
@@ -102,22 +108,11 @@ matchList.addEventListener('click', () => {
         spanActivity.innerHTML = event.target.innerHTML;
         for (const kgs in spanActivity.dataset) {
             spanActivity.dataset[kgs] = event.target.dataset[kgs];
+        spanActivity.classList.remove('span-results-default');
+        spanActivity.classList.add('span-results-filled');
+        }
     }
-    spanActivity.classList.remove('span-results-default');
-    spanActivity.classList.add('span-results-filled');
-}
-
 });
-
-matchListFood.addEventListener('click', () => {
-    if(spanFood.classList.contains('span-results-filled')){
-        console.log('filled')
-    }
-    else{
-        console.log('empty')
-    }
-})
-
 
 //Change weight calls calForKgs that calls calcul
  weight.addEventListener('change', () => {
