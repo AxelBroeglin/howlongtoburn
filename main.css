@@ -46,6 +46,13 @@ food > * {
   margin-bottom: 2vh;
 }
 
+.invisible{
+  display:none;
+}
+.visible{
+  display: inline;
+}
+
 #form-activity{
   display: flex;
   flex-direction: column;
