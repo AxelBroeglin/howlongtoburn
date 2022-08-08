@@ -49,12 +49,12 @@ searchFood.addEventListener('input', (e) =>{
 matchListFood.addEventListener('click', () =>{
     let kcal = event.target.innerHTML.slice(-3);
     if(spanFood.classList.contains('span-results-filled')){
-        spanFood.innerHTML = `${event.target.innerHTML.slice(0, -6)} (${kcal}`;
+        spanFood.innerHTML = `${event.target.innerHTML.slice(0, -6)} (${kcal} cal)`;
         calForKgs();
     }
     else{
         if(kcal.length > 0){
-            spanFood.innerHTML = `${event.target.innerHTML.slice(0, -6)} (${kcal}`;
+            spanFood.innerHTML = `${event.target.innerHTML.slice(0, -6)} (${kcal} cal)`;
             spanFood.classList.remove('span-results-default');
             spanFood.classList.add('span-results-filled');
         }    
