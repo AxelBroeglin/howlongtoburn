@@ -120,7 +120,6 @@ matchList.addEventListener('click', () => {
 
 
 const calForKgs = function () {
-    console.log('calForKgs called');
     let selectedKgs = weight.options[weight.selectedIndex].value;
     selectedKgs = spanActivity.dataset[`${selectedKgs}`];
     calculResults(selectedKgs);
@@ -130,11 +129,8 @@ const calForKgs = function () {
  * ! if change food, call this function
  */
 const calculResults = function (selectedKgs) {
-    console.log('calculResults called');
     let kcal = spanFood.innerHTML.slice(-3);
-    console.log(kcal)
     let timeToBurn = (kcal/selectedKgs) * 60;
-    console.log(timeToBurn);
     if(typeof timeToBurn == 'number'){
         spanMinutes.innerHTML = Math.trunc(timeToBurn);
         spanMinutes.classList.remove('span-results-default');
