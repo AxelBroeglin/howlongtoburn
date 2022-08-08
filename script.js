@@ -108,20 +108,20 @@ matchList.addEventListener('click', () => {
         spanActivity.innerHTML = event.target.innerHTML;
         for (const kgs in spanActivity.dataset) {
             spanActivity.dataset[kgs] = event.target.dataset[kgs];
-        spanActivity.classList.remove('span-results-default');
-        spanActivity.classList.add('span-results-filled');
+            spanActivity.classList.remove('span-results-default');
+            spanActivity.classList.add('span-results-filled');
         }
     }
 });
 
 //Change weight calls calForKgs that calls calcul
  weight.addEventListener('change', () => {
-    let selectedKgs = weight.options[weight.selectedIndex].value;
-    calForKgs(selectedKgs);
+    calForKgs();
  })
 
 
-const calForKgs = function (selectedKgs) {
+const calForKgs = function () {
+    let selectedKgs = weight.options[weight.selectedIndex].value;
     selectedKgs = spanActivity.dataset[`${selectedKgs}`];
     calculResults(selectedKgs)
 }
