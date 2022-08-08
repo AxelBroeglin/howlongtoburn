@@ -1,891 +1,511 @@
 [
   {
       "Activity": "Cycling - mountain bike bmx",
-      "kgs60": "502",
-      "kgs70": "598",
-      "kgs80": "695",
-      "kgs90": "791"
+      "kgs60": "502"
   },
   {
       "Activity": "Cycling - leisure bicycling",
-      "kgs60": "236",
-      "kgs70": "281",
-      "kgs80": "327",
-      "kgs90": "372"
+      "kgs60": "236"
+
   },
   {
       "Activity": "Cycling - racing",
-      "kgs60": "944",
-      "kgs70": "1126",
-      "kgs80": "1308",
-      "kgs90": "1489"
+      "kgs60": "944"
   },
   {
       "Activity": "Cycling - light",
-      "kgs60": "354",
-      "kgs70": "422",
-      "kgs80": "490",
-      "kgs90": "558"
+      "kgs60": "354"
   },
   {
       "Activity": "Cycling - moderate",
-      "kgs60": "472",
-      "kgs70": "563",
-      "kgs80": "654",
-      "kgs90": "745"
+      "kgs60": "472"
   },
   {
       "Activity": "Cycling - vigorous",
-      "kgs60": "590",
-      "kgs70": "704",
-      "kgs80": "817",
-      "kgs90": "931"
+      "kgs60": "590"
   },
   {
       "Activity": "Cycling - very fast",
-      "kgs60": "708",
-      "kgs70": "844",
-      "kgs80": "981",
-      "kgs90": "1117"
+      "kgs60": "708"
   },
   {
       "Activity": "Unicycling",
-      "kgs60": "295",
-      "kgs70": "352",
-      "kgs80": "409",
-      "kgs90": "465"
+      "kgs60": "295"
   },
   {
       "Activity": "Stationary cycling - very light",
-      "kgs60": "177",
-      "kgs70": "211",
-      "kgs80": "245",
-      "kgs90": "279"
+      "kgs60": "177"
   },
   {
       "Activity": "Stationary cycling - light",
-      "kgs60": "325",
-      "kgs70": "387",
-      "kgs80": "449",
-      "kgs90": "512"
+      "kgs60": "325"
   },
   {
       "Activity": "Stationary cycling - moderate",
-      "kgs60": "413",
-      "kgs70": "493",
-      "kgs80": "572",
-      "kgs90": "651"
+      "kgs60": "413"
   },
   {
       "Activity": "Stationary cycling - vigorous",
-      "kgs60": "620",
-      "kgs70": "739",
-      "kgs80": "858",
-      "kgs90": "977"
+      "kgs60": "620"
   },
   {
       "Activity": "Stationary cycling - very vigorous",
-      "kgs60": "738",
-      "kgs70": "880",
-      "kgs80": "1022",
-      "kgs90": "1163"
+      "kgs60": "738"
   },
   {
       "Activity": "Calisthenics - vigorous",
-      "kgs60": "472",
-      "kgs70": "563",
-      "kgs80": "654",
-      "kgs90": "745"
+      "kgs60": "472"
   },
   {
       "Activity": "Calisthenics - light",
-      "kgs60": "207",
-      "kgs70": "246",
-      "kgs80": "286",
-      "kgs90": "326"
+      "kgs60": "207"
   },
   {
       "Activity": "Circuit training - minimal rest",
-      "kgs60": "472",
-      "kgs70": "563",
-      "kgs80": "654",
-      "kgs90": "745"
+      "kgs60": "472"
   },
   {
       "Activity": "Weight lifting - body building",
-      "kgs60": "354",
-      "kgs70": "422",
-      "kgs80": "490",
-      "kgs90": "558"
+      "kgs60": "354"
   },
   {
       "Activity": "Weight lifting - light workout",
-      "kgs60": "177",
-      "kgs70": "211",
-      "kgs80": "245",
-      "kgs90": "279"
+      "kgs60": "177"
   },
   {
       "Activity": "Health club exercise",
-      "kgs60": "325",
-      "kgs70": "387",
-      "kgs80": "449",
-      "kgs90": "512"
+      "kgs60": "325"
   },
   {
       "Activity": "Stair machine",
-      "kgs60": "531",
-      "kgs70": "633",
-      "kgs80": "735",
-      "kgs90": "838"
+      "kgs60": "531"
   },
   {
       "Activity": "Rowing machine - light",
-      "kgs60": "207",
-      "kgs70": "246",
-      "kgs80": "286",
-      "kgs90": "326"
+      "kgs60": "207"
   },
   {
       "Activity": "Rowing machine - moderate",
-      "kgs60": "413",
-      "kgs70": "493",
-      "kgs80": "572",
-      "kgs90": "651"
+      "kgs60": "413"
   },
   {
       "Activity": "Rowing machine - vigorous",
-      "kgs60": "502",
-      "kgs70": "598",
-      "kgs80": "695",
-      "kgs90": "791"
+      "kgs60": "502"
   },
   {
       "Activity": "Rowing machine - very vigorous",
-      "kgs60": "708",
-      "kgs70": "844",
-      "kgs80": "981",
-      "kgs90": "1117"
+      "kgs60": "708"
   },
   {
       "Activity": "Ski machine",
-      "kgs60": "413",
-      "kgs70": "493",
-      "kgs80": "572",
-      "kgs90": "651"
+      "kgs60": "413"
   },
   {
       "Activity": "Aerobics - low impact",
-      "kgs60": "295",
-      "kgs70": "352",
-      "kgs80": "409",
-      "kgs90": "465"
+      "kgs60": "295"
   },
   {
       "Activity": "Aerobics - high impact",
-      "kgs60": "413",
-      "kgs70": "493",
-      "kgs80": "572",
-      "kgs90": "651"
+      "kgs60": "413"
   },
   {
       "Activity": "Aerobics - step aerobics",
-      "kgs60": "502",
-      "kgs70": "598",
-      "kgs80": "695",
-      "kgs90": "791"
+      "kgs60": "502"
   },
   {
       "Activity": "Aerobics - general",
-      "kgs60": "384",
-      "kgs70": "457",
-      "kgs80": "531",
-      "kgs90": "605"
+      "kgs60": "384"
   },
   {
       "Activity": "Jazzercise",
-      "kgs60": "354",
-      "kgs70": "422",
-      "kgs80": "490",
-      "kgs90": "558"
+      "kgs60": "354"
   },
   {
       "Activity": "Stretching - hatha yoga",
-      "kgs60": "236",
-      "kgs70": "281",
-      "kgs80": "327",
-      "kgs90": "372"
+      "kgs60": "236"
   },
   {
       "Activity": "Mild stretching",
-      "kgs60": "148",
-      "kgs70": "176",
-      "kgs80": "204",
-      "kgs90": "233"
+      "kgs60": "148"
   },
   {
       "Activity": "Instructing aerobic class",
-      "kgs60": "354",
-      "kgs70": "422",
-      "kgs80": "490",
-      "kgs90": "558"
+      "kgs60": "354"
   },
   {
       "Activity": "Water aerobics",
-      "kgs60": "236",
-      "kgs70": "281",
-      "kgs80": "327",
-      "kgs90": "372"
+      "kgs60": "236"
   },
   {
       "Activity": "Ballet - twist - jazz - tap",
-      "kgs60": "266",
-      "kgs70": "317",
-      "kgs80": "368",
-      "kgs90": "419"
+      "kgs60": "266"
   },
   {
       "Activity": "Ballroom dancing - slow",
-      "kgs60": "177",
-      "kgs70": "211",
-      "kgs80": "245",
-      "kgs90": "279"
+      "kgs60": "177"
   },
   {
       "Activity": "Ballroom dancing - fast",
-      "kgs60": "325",
-      "kgs70": "387",
-      "kgs80": "449",
-      "kgs90": "512"
+      "kgs60": "325"
   },
   {
       "Activity": "Running - 8kmh",
-      "kgs60": "472",
-      "kgs70": "563",
-      "kgs80": "654",
-      "kgs90": "745"
+      "kgs60": "472"
   },
   {
       "Activity": "Running - 10kmh",
-      "kgs60": "649",
-      "kgs70": "774",
-      "kgs80": "899",
-      "kgs90": "1024"
+      "kgs60": "649"
   },
   {
       "Activity": "Running - 13kmh",
-      "kgs60": "797",
-      "kgs70": "950",
-      "kgs80": "1103",
-      "kgs90": "1256"
+      "kgs60": "797"
   },
   {
       "Activity": "Running - 16kmh",
-      "kgs60": "944",
-      "kgs70": "1126",
-      "kgs80": "1308",
-      "kgs90": "1489"
+      "kgs60": "944"
   },
   {
       "Activity": "Running - cross country",
-      "kgs60": "531",
-      "kgs70": "633",
-      "kgs80": "735",
-      "kgs90": "838"
+      "kgs60": "531"
   },
   {
       "Activity": "Running - general",
-      "kgs60": "472",
-      "kgs70": "563",
-      "kgs80": "654",
-      "kgs90": "745"
+      "kgs60": "472"
   },
   {
       "Activity": "Running - stairs - up",
-      "kgs60": "885",
-      "kgs70": "1056",
-      "kgs80": "1226",
-      "kgs90": "1396"
+      "kgs60": "885"
   },
   {
       "Activity": "Track and field",
-      "kgs60": "354",
-      "kgs70": "422",
-      "kgs80": "490",
-      "kgs90": "558"
+      "kgs60": "354"
   },
   {
       "Activity": "Archery",
-      "kgs60": "207",
-      "kgs70": "246",
-      "kgs80": "286",
-      "kgs90": "326"
+      "kgs60": "207"
   },
   {
       "Activity": "Badminton",
-      "kgs60": "266",
-      "kgs70": "317",
-      "kgs80": "368",
-      "kgs90": "419"
+      "kgs60": "266"
   },
   {
       "Activity": "Basketball - competitive",
-      "kgs60": "472",
-      "kgs70": "563",
-      "kgs80": "654",
-      "kgs90": "745"
+      "kgs60": "472"
   },
   {
       "Activity": "Basketball - wheelchair",
-      "kgs60": "384",
-      "kgs70": "457",
-      "kgs80": "531",
-      "kgs90": "605"
+      "kgs60": "384"
   },
   {
       "Activity": "Billiards",
-      "kgs60": "148",
-      "kgs70": "176",
-      "kgs80": "204",
-      "kgs90": "233"
+      "kgs60": "148"
   },
   {
       "Activity": "Bowling",
-      "kgs60": "177",
-      "kgs70": "211",
-      "kgs80": "245",
-      "kgs90": "279"
+      "kgs60": "177"
   },
   {
       "Activity": "Boxing - in ring",
-      "kgs60": "708",
-      "kgs70": "844",
-      "kgs80": "981",
-      "kgs90": "1117"
+      "kgs60": "708"
   },
   {
       "Activity": "Boxing - punching bag",
-      "kgs60": "354",
-      "kgs70": "422",
-      "kgs80": "490",
-      "kgs90": "558"
+      "kgs60": "354"
   },
   {
       "Activity": "Boxing - sparring",
-      "kgs60": "531",
-      "kgs70": "633",
-      "kgs80": "735",
-      "kgs90": "838"
+      "kgs60": "531"
   },
   {
       "Activity": "Cricket",
-      "kgs60": "295",
-      "kgs70": "352",
-      "kgs80": "409",
-      "kgs90": "465"
+      "kgs60": "295"
   },
   {
       "Activity": "Croquet",
-      "kgs60": "148",
-      "kgs70": "176",
-      "kgs80": "204",
-      "kgs90": "233"
+      "kgs60": "148"
   },
   {
       "Activity": "Curling",
-      "kgs60": "236",
-      "kgs70": "281",
-      "kgs80": "327",
-      "kgs90": "372"
+      "kgs60": "236"
   },
   {
       "Activity": "Fencing",
-      "kgs60": "354",
-      "kgs70": "422",
-      "kgs80": "490",
-      "kgs90": "558"
+      "kgs60": "354"
   },
   {
       "Activity": "Football - competitive",
-      "kgs60": "531",
-      "kgs70": "633",
-      "kgs80": "735",
-      "kgs90": "838"
+      "kgs60": "531"
   },
   {
       "Activity": "Frisbee",
-      "kgs60": "177",
-      "kgs70": "211",
-      "kgs80": "245",
-      "kgs90": "279"
+      "kgs60": "177"
   },
   {
       "Activity": "Frisbee Ultimate",
-      "kgs60": "472",
-      "kgs70": "563",
-      "kgs80": "654",
-      "kgs90": "745"
+      "kgs60": "472"
   },
   {
       "Activity": "Golf - general",
-      "kgs60": "266",
-      "kgs70": "317",
-      "kgs80": "368",
-      "kgs90": "419"
+      "kgs60": "266"
   },
   {
       "Activity": "Golf - miniature golf",
-      "kgs60": "177",
-      "kgs70": "211",
-      "kgs80": "245",
-      "kgs90": "279"
+      "kgs60": "177"
   },
   {
       "Activity": "Gymnastics",
-      "kgs60": "236",
-      "kgs70": "281",
-      "kgs80": "327",
-      "kgs90": "372"
+      "kgs60": "236"
   },
   {
       "Activity": "Hacky sack",
-      "kgs60": "236",
-      "kgs70": "281",
-      "kgs80": "327",
-      "kgs90": "372"
+      "kgs60": "236"
   },
   {
       "Activity": "Handball",
-      "kgs60": "708",
-      "kgs70": "844",
-      "kgs80": "981",
-      "kgs90": "1117"
+      "kgs60": "708"
   },
   {
       "Activity": "Handball - team",
-      "kgs60": "472",
-      "kgs70": "563",
-      "kgs80": "654",
-      "kgs90": "745"
+      "kgs60": "472"
   },
   {
       "Activity": "Hockey - field hockey",
-      "kgs60": "472",
-      "kgs70": "563",
-      "kgs80": "654",
-      "kgs90": "745"
+      "kgs60": "472"
   },
   {
       "Activity": "Hockey - ice hockey",
-      "kgs60": "472",
-      "kgs70": "563",
-      "kgs80": "654",
-      "kgs90": "745"
+      "kgs60": "472"
   },
   {
       "Activity": "Riding a horse",
-      "kgs60": "236",
-      "kgs70": "281",
-      "kgs80": "327",
-      "kgs90": "372"
+      "kgs60": "236"
   },
   {
       "Activity": "Jai alai",
-      "kgs60": "708",
-      "kgs70": "844",
-      "kgs80": "981",
-      "kgs90": "1117"
+      "kgs60": "708"
   },
   {
       "Activity": "Judo - karate - jujitsu",
-      "kgs60": "590",
-      "kgs70": "704",
-      "kgs80": "817",
-      "kgs90": "931"
+      "kgs60": "590"
   },
   {
       "Activity": "Kick boxing",
-      "kgs60": "590",
-      "kgs70": "704",
-      "kgs80": "817",
-      "kgs90": "931"
+      "kgs60": "590"
   },
   {
       "Activity": "Tae kwan do",
-      "kgs60": "590",
-      "kgs70": "704",
-      "kgs80": "817",
-      "kgs90": "931"
+      "kgs60": "590"
   },
   {
       "Activity": "Krav maga training",
-      "kgs60": "590",
-      "kgs70": "704",
-      "kgs80": "817",
-      "kgs90": "931"
+      "kgs60": "590"
   },
   {
       "Activity": "Juggling",
-      "kgs60": "236",
-      "kgs70": "281",
-      "kgs80": "327",
-      "kgs90": "372"
+      "kgs60": "236"
   },
   {
       "Activity": "Kickball",
-      "kgs60": "413",
-      "kgs70": "493",
-      "kgs80": "572",
-      "kgs90": "651"
+      "kgs60": "413"
   },
   {
       "Activity": "Lacrosse",
-      "kgs60": "472",
-      "kgs70": "563",
-      "kgs80": "654",
-      "kgs90": "745"
+      "kgs60": "472"
   },
   {
       "Activity": "Orienteering",
-      "kgs60": "531",
-      "kgs70": "633",
-      "kgs80": "735",
-      "kgs90": "838"
+      "kgs60": "531"
   },
   {
       "Activity": "Paddleball",
-      "kgs60": "354",
-      "kgs70": "422",
-      "kgs80": "490",
-      "kgs90": "558"
+      "kgs60": "354"
   },
   {
       "Activity": "Polo",
-      "kgs60": "472",
-      "kgs70": "563",
-      "kgs80": "654",
-      "kgs90": "745"
+      "kgs60": "472"
   },
   {
       "Activity": "Racquetball",
-      "kgs60": "413",
-      "kgs70": "493",
-      "kgs80": "572",
-      "kgs90": "651"
+      "kgs60": "413"
   },
   {
       "Activity": "Rock climbing",
-      "kgs60": "649",
-      "kgs70": "774",
-      "kgs80": "899",
-      "kgs90": "1024"
+      "kgs60": "649"
   },
   {
       "Activity": "Jumping rope",
-      "kgs60": "590",
-      "kgs70": "704",
-      "kgs80": "817",
-      "kgs90": "931"
+      "kgs60": "590"
   },
   {
       "Activity": "Rugby",
-      "kgs60": "590",
-      "kgs70": "704",
-      "kgs80": "817",
-      "kgs90": "931"
+      "kgs60": "590"
   },
   {
       "Activity": "Skateboarding",
-      "kgs60": "295",
-      "kgs70": "352",
-      "kgs80": "409",
-      "kgs90": "465"
+      "kgs60": "295"
   },
   {
       "Activity": "Roller skating",
-      "kgs60": "413",
-      "kgs70": "493",
-      "kgs80": "572",
-      "kgs90": "651"
+      "kgs60": "413"
   },
   {
       "Activity": "Sky diving",
-      "kgs60": "177",
-      "kgs70": "211",
-      "kgs80": "245",
-      "kgs90": "279"
+      "kgs60": "177"
   },
   {
       "Activity": "Soccer - Football",
-      "kgs60": "413",
-      "kgs70": "493",
-      "kgs80": "572",
-      "kgs90": "651"
+      "kgs60": "413"
   },
   {
       "Activity": "Softball or baseball",
-      "kgs60": "295",
-      "kgs70": "352",
-      "kgs80": "409",
-      "kgs90": "465"
+      "kgs60": "295"
   },
   {
       "Activity": "Softball - pitching",
-      "kgs60": "354",
-      "kgs70": "422",
-      "kgs80": "490",
-      "kgs90": "558"
+      "kgs60": "354"
   },
   {
       "Activity": "Squash",
-      "kgs60": "708",
-      "kgs70": "844",
-      "kgs80": "981",
-      "kgs90": "1117"
+      "kgs60": "708"
   },
   {
       "Activity": "Table tennis",
-      "kgs60": "236",
-      "kgs70": "281",
-      "kgs80": "327",
-      "kgs90": "372"
+      "kgs60": "236"
   },
   {
       "Activity": "Ping pong",
-      "kgs60": "236",
-      "kgs70": "281",
-      "kgs80": "327",
-      "kgs90": "372"
+      "kgs60": "236"
   },
   {
       "Activity": "Tai chi",
-      "kgs60": "236",
-      "kgs70": "281",
-      "kgs80": "327",
-      "kgs90": "372"
+      "kgs60": "236"
   },
   {
       "Activity": "Playing tennis",
-      "kgs60": "413",
-      "kgs70": "493",
-      "kgs80": "572",
-      "kgs90": "651"
+      "kgs60": "413"
   },
   {
       "Activity": "Tennis - doubles",
-      "kgs60": "354",
-      "kgs70": "422",
-      "kgs80": "490",
-      "kgs90": "558"
+      "kgs60": "354"
   },
   {
       "Activity": "Tennis - singles",
-      "kgs60": "472",
-      "kgs70": "563",
-      "kgs80": "654",
-      "kgs90": "745"
+      "kgs60": "472"
   },
   {
       "Activity": "Trampoline",
-      "kgs60": "207",
-      "kgs70": "246",
-      "kgs80": "286",
-      "kgs90": "326"
+      "kgs60": "207"
   },
   {
       "Activity": "Volleyball",
-      "kgs60": "472",
-      "kgs70": "563",
-      "kgs80": "654",
-      "kgs90": "745"
+      "kgs60": "472"
   },
   {
       "Activity": "Wrestling",
-      "kgs60": "354",
-      "kgs70": "422",
-      "kgs80": "490",
-      "kgs90": "558"
+      "kgs60": "354"
   },
   {
       "Activity": "Wallyball",
-      "kgs60": "413",
-      "kgs70": "493",
-      "kgs80": "572",
-      "kgs90": "651"
+      "kgs60": "413"
   },
   {
       "Activity": "Hiking - cross country",
-      "kgs60": "354",
-      "kgs70": "422",
-      "kgs80": "490",
-      "kgs90": "558"
+      "kgs60": "354"
   },
   {
       "Activity": "Walking 5kmh",
-      "kgs60": "195",
-      "kgs70": "232",
-      "kgs80": "270",
-      "kgs90": "307"
+      "kgs60": "195"
   },
   {
       "Activity": "Boating",
-      "kgs60": "148",
-      "kgs70": "176",
-      "kgs80": "204",
-      "kgs90": "233"
+      "kgs60": "148"
   },
   {
       "Activity": "Canoeing - rowing",
-      "kgs60": "177",
-      "kgs70": "211",
-      "kgs80": "245",
-      "kgs90": "279"
+      "kgs60": "177"
   },
   {
       "Activity": "Paddle boat",
-      "kgs60": "236",
-      "kgs70": "281",
-      "kgs80": "327",
-      "kgs90": "372"
+      "kgs60": "236"
   },
   {
       "Activity": "Windsurfing - sailing",
-      "kgs60": "177",
-      "kgs70": "211",
-      "kgs80": "245",
-      "kgs90": "279"
+      "kgs60": "177"
   },
   {
       "Activity": "Sailing - competition",
-      "kgs60": "295",
-      "kgs70": "352",
-      "kgs80": "409",
-      "kgs90": "465"
+      "kgs60": "295"
   },
   {
       "Activity": "Skiing - water skiing",
-      "kgs60": "354",
-      "kgs70": "422",
-      "kgs80": "490",
-      "kgs90": "558"
+      "kgs60": "354"
   },
   {
       "Activity": "Ski mobiling",
-      "kgs60": "413",
-      "kgs70": "493",
-      "kgs80": "572",
-      "kgs90": "651"
+      "kgs60": "413"
   },
   {
       "Activity": "Scuba diving",
-      "kgs60": "413",
-      "kgs70": "493",
-      "kgs80": "572",
-      "kgs90": "651"
+      "kgs60": "413"
   },
   {
       "Activity": "Snorkeling",
-      "kgs60": "295",
-      "kgs70": "352",
-      "kgs80": "409",
-      "kgs90": "465"
+      "kgs60": "295"
   },
   {
       "Activity": "Surfing",
-      "kgs60": "177",
-      "kgs70": "211",
-      "kgs80": "245",
-      "kgs90": "279"
+      "kgs60": "177"
   },
   {
       "Activity": "Swimming backstroke",
-      "kgs60": "413",
-      "kgs70": "493",
-      "kgs80": "572",
-      "kgs90": "651"
+      "kgs60": "413"
   },
   {
       "Activity": "Swimming breaststroke",
-      "kgs60": "590",
-      "kgs70": "704",
-      "kgs80": "817",
-      "kgs90": "931"
+      "kgs60": "590"
   },
   {
       "Activity": "Swimming butterfly",
-      "kgs60": "649",
-      "kgs70": "774",
-      "kgs80": "899",
-      "kgs90": "1024"
+      "kgs60": "649"
   },
   {
       "Activity": "Swimming sidestroke",
-      "kgs60": "472",
-      "kgs70": "563",
-      "kgs80": "654",
-      "kgs90": "745"
+      "kgs60": "472"
   },
   {
       "Activity": "Swimming synchronized",
-      "kgs60": "472",
-      "kgs70": "563",
-      "kgs80": "654",
-      "kgs90": "745"
+      "kgs60": "472"
   },
   {
       "Activity": "Water polo",
-      "kgs60": "590",
-      "kgs70": "704",
-      "kgs80": "817",
-      "kgs90": "931"
+      "kgs60": "590"
   },
   {
       "Activity": "Water volleyball",
-      "kgs60": "177",
-      "kgs70": "211",
-      "kgs80": "245",
-      "kgs90": "279"
+      "kgs60": "177"
   },
   {
       "Activity": "Water jogging",
-      "kgs60": "472",
-      "kgs70": "563",
-      "kgs80": "654",
-      "kgs90": "745"
+      "kgs60": "472"
   },
   {
       "Activity": "Diving",
-      "kgs60": "177",
-      "kgs70": "211",
-      "kgs80": "245",
-      "kgs90": "279"
+      "kgs60": "177"
   },
   {
       "Activity": "Ice skating",
-      "kgs60": "413",
-      "kgs70": "493",
-      "kgs80": "572",
-      "kgs90": "651"
+      "kgs60": "413"
   },
   {
       "Activity": "General housework",
-      "kgs60": "207",
-      "kgs70": "246",
-      "kgs80": "286",
-      "kgs90": "326"
+      "kgs60": "207"
   },
   {
       "Activity": "Cleaning gutters",
-      "kgs60": "295",
-      "kgs70": "352",
-      "kgs80": "409",
-      "kgs90": "465"
+      "kgs60": "295"
   },
   {
       "Activity": "Painting",
-      "kgs60": "266",
-      "kgs70": "317",
-      "kgs80": "368",
-      "kgs90": "419"
+      "kgs60": "266"
   }
 ]
