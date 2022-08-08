@@ -5,7 +5,6 @@ const matchListFood = document.getElementById('match-list-food');
 const search = document.getElementById('search');
 const matchList = document.getElementById('match-list-activity');
 let weight = document.getElementById('weight');
-let weight2 = document.getElementById('weight2');
 /***************RESULT VARIABLE*************/
 const results = document.getElementById('results');
 const spanFood = document.getElementById('span-food');
@@ -45,8 +44,7 @@ const outputHtmlFood = nutriments => {
 let weightOptions = ["<option></option>"];
 for (let i = 50; i < 121; i++) {
     weightOptions.push(`<option value='${[i]}'> ${[i]} kgs</option>`);
-    console.log(weightOptions)
-    weight2.innerHTML = weightOptions.join('');  
+    weight.innerHTML = weightOptions.join('');  
     }
 
 /**********FOOD EVENT LISTENERS*********/
@@ -90,7 +88,6 @@ const searchActivities = async searchText => {
     outputHtml(matches.slice(0,10));
 };
 
-//For loop to limit at 10 results ?
 const outputHtml = matches => {
     if(matches.length > 0){
         const html = matches.map(match => `<div class="search-results" data-kgs60="${match.kgs60}" data-kgs70="${match.kgs70}" data-kgs80="${match.kgs80}" data-kgs90="${match.kgs90}">${match.Activity}</div>`
@@ -120,21 +117,21 @@ matchList.addEventListener('click', () => {
             spanActivity.classList.remove('span-results-default');
             spanActivity.classList.add('span-results-filled');
         }
-        if(spanFood.classList.contains('span-results-filled')){
+        if(spanMinutes.classList.contains('span-results-filled')){
             calForKgs();
         }
     }
 });
-
-//Change weight calls calForKgs that calls calcul
+ 
  weight.addEventListener('change', () => {
     calForKgs();
  })
 
 
 const calForKgs = function () {
-    let selectedKgs = weight.options[weight.selectedIndex].value;
-    selectedKgs = spanActivity.dataset[`${selectedKgs}`];
+    let selectedWeight = weight.options[weight.selectedIndex].value;
+    let activityCal = spanActivity.dataset.kgs60;
+    let selectedKgs = selectedWeight*activityCal/60;
     calculResults(selectedKgs);
 }
 
@@ -150,16 +147,3 @@ const calculResults = function (selectedKgs) {
         spanMinutes.classList.remove('span-results-filled');
     }
 }
-
-
-/**
- * *S'il n'y a qu'un choix dans la liste event listener ne fonctionne pas car il est sur change, pas possible de changer si qu'un seul choix
- * * Propositions devraient être affichées dans une liste ouverte, pour inciter au choix
- * * Afficher liste de choix sous la boite de rechercher, pas dans select-option, comme dans auto complete etats. (Liste passe au dessus du reste, ne le pousse pas)
- * * La liste disparaitra au clic, obligeant à recliquer dans champ de rechercher pour modifier, nouveau clic -> ouvre liste -> clic dans liste triggers l'event listener relançant le calcul et maj de la phrase
- * * Préparer les classes et variables pour le changement, prévoir le css.
- * TODO Pour le changement une fois un premier calcul fait :
- * TODO détecter la classe des span pour savoir si elles contiennent quelque chose, si oui refaire calcul
- * TODO Cette dectection doit se faire au clic, comme la précédente.
- * 
- *  */
