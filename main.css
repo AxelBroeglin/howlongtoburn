@@ -79,8 +79,6 @@ food > * {
   flex-shrink: 0;
   height:4vh;
   min-width: 16px;
-  margin-left: 1rem;
-  margin-right: calc(-0.125em + 0.025rem);
   letter-spacing: 0.025rem;
   font-weight: 600;
   border: 0;
