@@ -58,32 +58,39 @@ food > * {
 #form-activity{
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .search{
-  /* position: relative;
-  left: 30%;
-  width:40%;
-  height:4vh;
-  margin-top: 1em;
-  font-size: 1.1em;
-  color: black;
-  text-align: center; */
-
   position: relative;
-  left: 30%;
-  width:40%;
+  left: 35%;
+  width:30%;
   fill: rgba(0,0,0,0.302);
-  color: rgba(0,0,0,0.729);
   flex-grow: 0;
   flex-shrink: 0;
-  height:4vh;
+  height:6vh;
   min-width: 16px;
   letter-spacing: 0.025rem;
   font-weight: 600;
   border: 0;
   text-align: center;
   border-radius: 5px;
+  font-size: 1.1em;
+}
+
+#weight-wrapper{
+  font-size: 1.1em;
+}
+
+.select{
+  padding:10px;
+  font-weight: 400;
+  font-size: 0.8em;
+  border-radius: 3px;
+}
+
+input::placeholder{
+  color: rgba(0, 0, 0, 0.623);
 }
 
 #match-list{
@@ -99,6 +106,7 @@ food > * {
   background-color: hsla(27, 66%, 92%, 0.836);
   margin-bottom: 5px;
   font-size: 1.1em;
+  cursor: pointer;
 }
 
 #food-wrapper{
