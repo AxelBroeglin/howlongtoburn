@@ -117,7 +117,7 @@ input::placeholder{
 #weight-wrapper{
   position: absolute;
   bottom: 0;
-  left:15%;
+  left:15%.
   width: 70%;
   display: flex;
   align-items: center;
