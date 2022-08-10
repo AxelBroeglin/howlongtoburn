@@ -103,7 +103,8 @@ input::placeholder{
 }
 
 .search-results{
-  background-color: hsla(27, 66%, 92%, 0.836);
+  background-color: hsl(27deg 4% 16% / 34%);
+  color: #e7e2e2;
   margin-bottom: 5px;
   font-size: 1.1em;
   cursor: pointer;
