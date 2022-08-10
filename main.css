@@ -42,6 +42,7 @@ form{
   display: flex;
   flex-direction: column;
   width: 50%;
+  padding: 5px;
 }
 food > * {
   margin-bottom: 2vh;
@@ -59,6 +60,7 @@ food > * {
   display: flex;
   flex-direction: column;
   position:relative;
+  padding: 5px;
 }
 
 .search{
@@ -106,6 +108,8 @@ input::placeholder{
   background-color: hsl(27deg 4% 16% / 34%);
   color: #e7e2e2;
   margin-bottom: 5px;
+  margin: 0 5px 5px 5px;
+  padding: 4px;
   font-size: 1.1em;
   cursor: pointer;
 }
