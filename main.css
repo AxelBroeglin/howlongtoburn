@@ -105,8 +105,8 @@ input::placeholder{
   padding-top: 30px;
 }
 
-#match-list-activity, #match-list-food{
-  padding-top: 5vh;
+.match-list{
+  padding-top: 3vh;
 }
 
 .search-results{
