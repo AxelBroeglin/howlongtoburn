@@ -112,8 +112,7 @@ input::placeholder{
 .search-results{
   background-color: hsl(27deg 4% 16% / 34%);
   color: #e7e2e2;
-  margin-bottom: 5px;
-  margin: 0 5px 5px 5px;
+  margin: 0 5px 8px 5px;
   padding: 4px;
   font-size: 1.1em;
   cursor: pointer;
