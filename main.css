@@ -84,7 +84,7 @@ h2{
 }
 
 .select{
-  padding:10px;
+  padding:6px;
   font-weight: 400;
   font-size: 0.8em;
   border-radius: 3px;
@@ -126,11 +126,6 @@ input::placeholder{
 
 #weight{
   margin-left: 20px;
-  height: 20px;
-}
-
-.fields{
-  height:20px;
 }
 
 #results-wrapper{
