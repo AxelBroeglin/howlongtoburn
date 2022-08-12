@@ -55,18 +55,15 @@ searchFood.addEventListener('input', (e) =>{
 
 matchListFood.addEventListener('click', () =>{
     let kcal = event.target.innerHTML.slice(-3);
-    if(spanFood.classList.contains('span-results-filled') || weight.value !== ""){
+    if(kcal.length > 0){
+        spanCal.classList.add('visible');
+        spanCal.classList.remove('invisible');
+        spanFood.classList.remove('span-results-default');
+        spanFood.classList.add('span-results-filled');
         spanFood.innerHTML = `${event.target.innerHTML.slice(0, -6)} (${kcal}`;
-        calForKgs();
-    }
-    else{
-        if(kcal.length > 0){
-            spanFood.innerHTML = `${event.target.innerHTML.slice(0, -6)} (${kcal}`;
-            spanCal.classList.add('visible');
-            spanCal.classList.remove('invisible');
-            spanFood.classList.remove('span-results-default');
-            spanFood.classList.add('span-results-filled');
-        }    
+        if(weight.value !== "" ||spanFood.classList.contains('span-results-filled')){
+            calForKgs();
+        }
     }
 })
 
