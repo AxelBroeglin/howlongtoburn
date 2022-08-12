@@ -55,7 +55,7 @@ searchFood.addEventListener('input', (e) =>{
 
 matchListFood.addEventListener('click', () =>{
     let kcal = event.target.innerHTML.slice(-3);
-    if(spanFood.classList.contains('span-results-filled')){
+    if(spanFood.classList.contains('span-results-filled') || weight.value !== ""){
         spanFood.innerHTML = `${event.target.innerHTML.slice(0, -6)} (${kcal}`;
         calForKgs();
     }
