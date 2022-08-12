@@ -4,11 +4,11 @@ const matchListFood = document.getElementById('match-list-food');
 /***************ACTIVITIES VARIABLES*************/
 const search = document.getElementById('search');
 const matchList = document.getElementById('match-list-activity');
-let weight = document.getElementById('weight');
+const weight = document.getElementById('weight');
 /***************RESULT VARIABLE*************/
 const results = document.getElementById('results');
 const spanFood = document.getElementById('span-food');
-let spanCal = document.getElementById('span-cal');
+const spanCal = document.getElementById('span-cal');
 const spanActivity = document.getElementById('span-activity');
 const spanMinutes = document.getElementById('span-minutes');
 
