@@ -63,10 +63,13 @@ matchListFood.addEventListener('click', () =>{
         //Shows clicked value in the result sentence
         spanFood.innerHTML = `${event.target.innerHTML.slice(0, -6)} (${kcal}`;
         if(weight.value !== "" ||spanFood.classList.contains('span-results-filled')){
-            calForKgs();
+            calForKgs(kcal);
         }
     }
+    return kcal;
 })
+
+console.log(kcal)
 
 
 
@@ -122,19 +125,18 @@ for (let i = 50; i < 121; i++) {
  **********************/
 
 //Gathers info from inputs, send it to calculResults
-const calForKgs = function () {
+const calForKgs = function (kcal) {
     //Takes value of selected weight
     let selectedWeight = weight.options[weight.selectedIndex].value;
     //Takes dataset of 60kgs for reference
     let activityCal = spanActivity.dataset.kgs60;
     //Calculates proportionnal value
     let selectedKgs = selectedWeight*activityCal/60;
-    calculResults(selectedKgs);
+    calculResults(selectedKgs, kcal);
 }
 
 //Final calc function
-const calculResults = function (selectedKgs) {
-    let kcal = spanFood.innerHTML.slice(-3);
+const calculResults = function (selectedKgs, kcal) {
     //Calculates time to burn
     let timeToBurn = (kcal/selectedKgs) * 60;
     if(!isNaN(timeToBurn)){
