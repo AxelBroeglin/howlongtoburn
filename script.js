@@ -62,7 +62,7 @@ matchListFood.addEventListener('click', () =>{
         spanFood.classList.add('span-results-filled');
         //Shows clicked value in the result sentence
         spanFood.innerHTML = `${event.target.innerHTML.slice(0, -6)} (${kcal}`;
-        if(spanFood.classList.contains('span-results-default')){
+        if(weight.value !== "" && spanActivity.classList.contains('span-results-filled')){
             calForKgs();
         }
     }
