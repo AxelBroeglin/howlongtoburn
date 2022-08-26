@@ -5,7 +5,7 @@
 ## Table of Contents
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
-* [Screenshots](#screenshots) // Soon
+* [Screenshots](#screenshots)
 * [Usage](#usage)
 * [Project Status](#project-status)
 * [Room for Improvement](#room-for-improvement)
@@ -26,7 +26,7 @@
 
 
 ## Screenshots
-Soon
+![image](https://user-images.githubusercontent.com/16608247/186969093-4bcdb616-7941-4014-9dc6-810953667abb.png)
 
 ## Usage
 User searches for the food of their choice. The app dynamically shows them 10 results (found with the API) each time they press a key. Then user searches for the activity, still with an autocompletion search box (through the JSON file this time). A list is shown as before, and the user can chose the actity. After choosing their weight, the calculation is done and the app shows Howlongtoburn.
