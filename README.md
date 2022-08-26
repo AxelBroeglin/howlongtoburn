@@ -36,11 +36,7 @@ Project is: _finished_.
 
 ## Room for Improvement
 Room for improvement:
-- The project is not finished yet, but result of the API can be better
-
-To do:
-- First draft is done, now I will allow user to easily change the parameters without having to reload the page
-- Finish the design of the page.
+- The API can return results which sometimes are a bit cranky, to assure more stable and predictable results, a paid API would be better.
 
 
 ## Contact
